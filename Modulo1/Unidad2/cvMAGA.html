@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>CV Matias Gonzalez</title>
+    </head>
+    <body>
+        <h1>MATIAS ALEJANDRO GONZALEZ ARDUBINO</h1>
+        <img src="" alt="Mi foto del CV" <br><!--etiqueta <br> genera salto de linea no usa cierra de etiqueta-->
+        <p><b>Edad: </b>41</p><!--etiqueta <b> usa letra negrita-->
+        <p><b>Domicilio: </b>Yapeyu e Independencia</p> 
+        <h2>¿Que series me gustan?</h2>
+        <ol>
+            <li>Alf</li>
+            <li>Breaking bad</li>
+            <li>Cobra kai</li>
+            <li>Los 100</li>
+            <li>Transformers (animada)</li>
+        </ol>
+        <h3>¿Que peliculas me gustan?</h3>
+        <ul>
+            <li>Danza con lobos</li>
+            <li>El precio del mañana</li>
+            <li>El destino de Jupiter</li>
+            <li>Dune</li>
+            <li>Idiocracia</li>
+        </ul>
+        <h4>Perfil, gustos personales</h4>
+        <p>Me gusta caminar sin rumbo</p>
+        <p>Me gusta cocinar y comer</p>
+        <p>Me gusta esta parte de aprender a programar</p>
+        <form action="formulario de ejemplo"><!--atributo action indica donde se dirigen los datos del formulario-->
+            <fieldset><!--esta etiqueta agrupa entradas relacionadas-->
+                <legend>Deja tus datos de contacto. Gracias</legend><!--titulo del formulario-->
+                <div class="form-control">
+                    <label for="name">Nombre</label>
+                    <input type="name" id="name" placeholder="Introduce tu nombre" required/>
+                </div>
+                <div class="form-control">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Introduce tu email" required/>
+                </div>
+                <div class="form-control">
+                    <label for="tel">Telefono</label>
+                    <input type="tel" placeholder="Introduce tu telefono"/>
+                </div>
+                <div>
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" cols="30" rows="10" placeholder="Deja tu mensaje" required></textarea>
+                </div>
+                <input type="submit" value="Enviar" class="submit-btn" />
+            </fieldset>
+        </form>
+    </body>
+</html>
