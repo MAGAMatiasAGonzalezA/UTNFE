@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <form action="formulario.html"><!--atributo action indica donde se dirigen los datos del formulario-->
+        <fieldset><!--esta etiqueta agrupa entradas relacionadas-->
+            <legend>Deja tus datos de contacto. Gracias</legend><!--titulo del formulario-->
+            <div class="form-control">
+                <label for="name">Nombre</label>
+                <input type="name" id="name" required/>
+            </div>
+            <div class="form-control">
+                <label for="email">Email</label>
+                <input type="email" id="email" required/>
+            </div>
+            <div class="form-control">
+                <input type="tel" placeholder="Introduce tu telefono"/>
+            </div>
+            <div>
+                <label for="message">Mensaje</label>
+                <textarea id="message" cols="30" rows="10" required></textarea>
+            </div>
+            <input type="submit" value="Enviar" class="submit-btn" />
+        </fieldset>
+    </form>
+</body>
+</html>
