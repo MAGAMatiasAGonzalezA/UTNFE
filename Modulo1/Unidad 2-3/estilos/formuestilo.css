@@ -1,0 +1,27 @@
+
+fieldset{
+    background-color:blanchedalmond;
+    display:column;
+    width:30%;
+}
+legend{
+    color: rgb(2, 29, 6);
+}
+#name{
+    background-color:aquamarine;
+}
+#lastname{
+    background-color:aquamarine;
+}
+#email{
+    background-color:aquamarine;
+}
+#tel{
+    background-color:aquamarine;
+}
+#message{
+    background-color:aquamarine;
+}
+#enviar{
+    background-color:aquamarine;
+}
