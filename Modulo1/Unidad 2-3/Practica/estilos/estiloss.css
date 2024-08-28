@@ -1,0 +1,57 @@
+body{
+    background-color:beige;
+}
+h2{
+    text-align:center;
+    color:blue;
+}
+.contenedor{
+    position:relative;
+    overflow:hidden;
+    background-color:cadetblue;
+    display:flex;
+    flex-direction:column;
+    align-items: stretch;
+    width:100%;
+    height:auto;
+    padding:10px;
+}
+img{
+    width:30px;
+    height:30px;
+}
+.contenedor .cuadritos{
+    background-color:blanchedalmond;
+    display:flex;
+    width:500;
+    height:auto;
+    min-height:700px;
+    overflow:auto;
+}
+.contenedor .cuadritos .listaor{
+    display:grid;
+    background-color: coral;
+    grid-template-columns: 1fr;
+    list-style-type: none;
+}
+.listaor .item{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+.margend{
+    float:right;
+    margin-right:10px;
+}
+.item1{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+.margend1{
+    float:right;
+    margin-right:10px;
+}
+
+
+
