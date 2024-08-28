@@ -5,11 +5,12 @@ h1{
 h2 {
     color: blue;
     font-family: 'Segoe UI';
-    margin: center;
+    text-align: center;
 }
 h3{
     color:darkgreen;
     font-style: "italic";
+    text-align: center;
 }
 
 ol{
@@ -64,13 +65,14 @@ ul{
 }
 
 #principal{
+    container: parent;
     border:1px solid black;
     background-color:orange;
     margin: left;
     width: 60%;
-    height: 550px;
     position: relative;
 }
+
 #sinrumbo{                  /*  Este id marca dos parrafos <p>.*/
     color:green;          /*  Profe en la clase menciono, */
     border-style:solid;     /*  que usar un ID mas de una vez,*/
@@ -88,10 +90,17 @@ ul{
     top: 0px;
     left: 0px;
     margin: 0 auto;
-    height: 14,5%;
-    width: 80%;
+    width: 100%;
+    height: 20%;
     border:1px solid black;
-    margin-bottom:20px;
+    box-sizing:border-box;
+    margin-bottom:10px;
+    display:flex;
+    overflow:hidden;
+}
+#listaor ol li img{
+    width:5%;
+    height:5%;
 }
 .margend{
     float:right;
@@ -100,7 +109,6 @@ ul{
     margin-right:3px;
     margin-bottom:3px;
     width:50px;
-    height:10px;
 }
 .margend1{
     float:right;
