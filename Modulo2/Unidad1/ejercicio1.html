@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+    <link rel="stylesheet" href="estilos\estilos1.css">
+</head>
+<body>
+    <h1>Ejercicio 1</h1>
+    <div class="caja1">caja1</div>
+    <div class="caja2">caja2</div>
+    <div class="caja3">caja3</div>
+
+    <script>
+
+        const caja1 = document.querySelector(".caja1");
+        const caja2 = document.querySelector(".caja2");
+        const caja3 = document.querySelector(".caja3");
+
+        caja1.addEventListener('click', function (){
+            caja1.style.backgroundColor = "rgb(252, 248, 5)";
+        });
+        caja2.addEventListener('click', function (){
+            caja2.style.backgroundColor = "rgb(93, 173, 226)";
+        });
+        caja3.addEventListener('click', function (){
+            caja3.style.backgroundColor = "rgb(238 130 238)";
+        });
+
+    </script>
+</body>
+</html>

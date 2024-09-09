@@ -1,64 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-
-    <head>
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>CV Matias Gonzalez</title>
-        <link rel="stylesheet" href="estilos\estilos.css"/>
-    </head>
-
-    <body>
-        <h1>MATIAS ALEJANDRO GONZALEZ ARDUBINO</h1>
-        <div id="cabecera">
-            <div class="cvfoto1">
-                <img src="img/lindarec.jpg" width="300" height="300"  alt="Foto recuerdo">          
-            </div>
-            <div  class="parra1">    
-                <p><b>Edad: </b>41<br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quaerat voluptatibus praesentium obcaecati voluptatem. Et, totam. Expedita nam harum dicta, consectetur libero repellendus optio vero beatae quis alias veniam eveniet.</p><!--etiqueta <b> usa letra negrita-->
-            </div>
-            <div class="cvfoto">
-                <img src="CVimagen.jpg" width="300" height="300"  alt="Mi foto del CV"> <br><!--etiqueta <br> genera salto de linea no usa cierra de etiqueta-->         
-            </div>
-            <div class="parra2">
-                <p><b>Domicilio: </b>Yapeyu e Independencia<br>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel enim molestias, maiores cum sapiente numquam? Deserunt neque nostrum facere, officia tempora ad laudantium, ab deleniti provident qui non, rem dignissimos!</p> 
-            </div>
-            </div>
-            
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos\nuestilo.css">
+</head>
+<body>
+    <header>
+        <h1>Matias Alejandro Gonzalez Ardubino</h1>
+        <div class="divheader">
+            <ul class="ulheader">
+                <li><b>Edad: </b>41</li>
+                <li><b>Domicilio: </b>Yapeyu e Independencia</li>
+                <li><b>Ocupacion: </b>Estudiante front end inicial</li>
+                <li><b>Gustos: </b>Caminar</li>
+                <li><b>Deporte: </b>Futbol</li>
+                <li><b>Algo: </b>Bicicleta</li>
+                <li><b>Algo más: </b>Aprendiendo a crecer</li>
+            </ul>
+        <figure>
+            <img src="CVimagen.jpg" class="fotocv" alt="foto CV">
+            <figcaption>Ese soy yo 🙋‍♂️</figcaption>
+        </figure>
         </div>
-        <p></p>
-        <div id="principal">   
+    </header>
+    <main>
+        <section class ="contenedor"> 
             <h2>¿Que series me gustan?</h2>
-            <div id="listaor">
-                <ol>
-                    <li>Alf <a href="img/009.jpg" target="_blank"><img src="img\009.jpg" alt="Recuerdo" class="margend"></a></li>
-                    <li>Breaking bad <a href="img/011.jpg" target="_blank"><img src="img\011.jpg" alt="Recuerdo" class="margend"></a></li>
-                    <li>Cobra kai <a href="img/012.jpg" target="_blank"><img src="img\012.jpg" alt="Recuerdo" class="margend"></a></li>
-                    <li>Los 100 <a href="img/013.jpg" target="_blank"><img src="img\013.jpg" alt="Recuerdo" class="margend"></a></li>
-                    <li>Transformers (animada) <a href="img/016.jpg" target="_blank"><img src="img\016.jpg" alt="Recuerdo" class="margend"></a></li>
+            <div id="cuadritos">
+                <ol class="listaor">
+                    <li class="item">Alf <a href="img/009.jpg" target="_blank"><img src="img\009.jpg" alt="Recuerdo" class="margend"></a></li> 
+                    <li class="item">Breaking bad <a href="img/011.jpg" target="_blank"><img src="img\011.jpg" alt="Recuerdo" class="margend"></a></li>
+                    <li class="item">Cobra kai <a href="img/012.jpg" target="_blank"><img src="img\012.jpg" alt="Recuerdo" class="margend"></a></li>
+                    <li class="item">Los 100 <a href="img/013.jpg" target="_blank"><img src="img\013.jpg" alt="Recuerdo" class="margend"></a></li>
+                    <li class="item">Transformers (animada) <a href="img/016.jpg" target="_blank"><img src="img\016.jpg" alt="Recuerdo" class="margend"></a></li>
                 </ol>
             </div>
             <h3>¿Que peliculas me gustan?</h3>
-            <div id="listades">
-                <ul>
-                    <li><span class="coloreando">Danza con lobos</span></li>
-                    <li>El precio del mañana</li>
-                    <li>El destino de Jupiter</li>
-                    <li>Dune</li>
-                    <li>Idiocracia</li>
+            <div id="cuadritos">
+                <ul class="listaul">
+                    <li class="item1">Alf <a href="img/009.jpg" target="_blank"><img src="img\009.jpg" alt="Recuerdo" class="margend1"></a></li>
+                    <li class="item1">Breaking bad <a href="img/011.jpg" target="_blank"><img src="img\011.jpg" alt="Recuerdo" class="margend1"></a></li>
+                    <li class="item1">Cobra kai <a href="img/012.jpg" target="_blank"><img src="img\012.jpg" alt="Recuerdo" class="margend1"></a></li>
+                    <li class="item1">Los 100 <a href="img/013.jpg" target="_blank"><img src="img\013.jpg" alt="Recuerdo" class="margend1"></a></li>
+                    <li class="item1">Transformers (animada) <a href="img/016.jpg" target="_blank"><img src="img\016.jpg" alt="Recuerdo" class="margend1"></a></li>
                 </ul>
             </div>
+        </section>
+        <article>
             <div id="final">
                 <h4>Perfil, gustos personales</h4>
-                <p id="sinrumbo">Me gusta caminar sin rumbo</p>
+                <p class="sinrumbo">Me gusta caminar sin rumbo</p>
                 <p>Me gusta cocinar y comer</p>
-                <p id="sinrumbo">Me gusta esta parte de <span class="coloreando">aprender a programar</span></p>
-                <p>Recuerdos lindos... al final del reglon <a href="audio/Aguanta.mp3"><audio class="margend1" src="audio/Aguanta.mp3" controls></audio></a></p>
+                <p class="sinrumbo">Me gusta esta parte de <span class="coloreando">aprender a programar</span></p>
+                <p>Tono de mensaje... es oportuno... <a class="tono1" href="audio/Aguanta.mp3"><audio class="aguanta" src="audio/Aguanta.mp3" controls></audio></a></p>
+                
             </div>
-        </div>
+        </article>
+    </main>
+    <footer>
         <p id="formu">Para comunicarte con migo accede al <a href="formulario.html" target="_blank">formulario</a></p>
-        <!-- <audio id="separado" src="audio/Aguanta.mp3" controls></audio> -->
-    </body>
-
+    </footer>
+</body>
 </html>
-

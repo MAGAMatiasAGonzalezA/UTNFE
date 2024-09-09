@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+    <link rel="stylesheet" href="estilos\estilos2.css">
+</head>
+<body>
+    <h1>Ejercicio 2</h1>
+    <textarea name="contando" id="texcontando" placeholder="Escribe algo..."></textarea>
+
+    <button onclick="contcaracteres();">Cuantos caracteres hay en el parrafo</button>
+
+        <script>
+            function contcaracteres() {
+                const contenido = document.getElementById("texcontando").value;
+            
+                const num = contenido.length;
+
+                alert(`Hay ${num} de caracteres en este texarea`);
+            }
+        </script>
+</body>
+</html>

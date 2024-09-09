@@ -1,158 +1,59 @@
-h1{
-    text-align: center;
-    text-shadow: 1px 1px;
-}
-h2 {
-    color: blue;
-    font-family: 'Segoe UI';
-    text-align: center;
-}
-h3{
-    color:darkgreen;
-    font-style: "italic";
-    text-align: center;
-}
-
-ol{
-    background-color: rgb(247, 237, 237);
-    padding: 10;
-    margin: 0;
-}
-li{
-    color:rgb(27, 29, 39);
-    text-transform: capitalize;
-}
-ul{
+body{
     background-color:beige;
-    margin: 0;
 }
-
-.coloreando{
-    color:blue;
-}
-
-#cabecera{
-    background-color:blanchedalmond;
-    border:1px solid black;
-    margin:0 auto;
-    height:100%;
-    display:flex;
-    justify-items:center;
-    justify-items: space-between;
-    align-items:space-between;
-    align-items:center;
-    align-items:stretch;
-    align-items:space-evenly; 
-}
-.parra .parra1 .cvfoto .cvfoto1{
-    width:25%;
-    margin:10px;
+h2{
     text-align:center;
-}
-.parra1 p, .parra2 p{
-    font-size:20px;
-    color:blue;
-    margin-left:20px;
-    margin-right:10px;
-}
-.cvfoto img, .cvfoto1 img{
-    max-width:100%;
-    height:auto;
-    width:100%;
-    margin-left:10px;
-    margin-top:10px;
-    margin-bottom:10px;
-}
-
-#principal{
-    container: parent;
-    border:1px solid black;
-    background-color:orange;
-    margin: left;
-    width: 60%;
-    position: relative;
-}
-
-#sinrumbo{                  /*  Este id marca dos parrafos <p>.*/
-    color:green;          /*  Profe en la clase menciono, */
-    border-style:solid;     /*  que usar un ID mas de una vez,*/
-    border-color:blue;    /*  es mal utilizar los recurso,  */
-    display: inline-block;  /*  yo lo practique antes de la clase */
-    margin:0px;             /*  funciona, ¿pero lo deberia corregir? */
-}
-#formu{
-    text-align:right;
     color:blue;
 }
-
-#listaor{
+.contenedor{
     position:relative;
-    top: 0px;
-    left: 0px;
-    margin: 0 auto;
-    width: 100%;
-    height: 20%;
-    border:1px solid black;
-    box-sizing:border-box;
-    margin-bottom:10px;
-    display:flex;
     overflow:hidden;
+    background-color:cadetblue;
+    display:flex;
+    flex-direction:column;
+    align-items: stretch;
+    width:100%;
+    height:auto;
+    padding:10px;
 }
-#listaor ol li img{
-    width:5%;
-    height:5%;
+img{
+    width:30px;
+    height:30px;
+}
+.cuadritos{
+    background-color:blanchedalmond;
+    display:flex;
+    width:500;
+    height:auto;
+    min-height:700px;
+    overflow:auto;
+}
+.listaor{
+    padding:0;
+    display:grid;
+    background-color: coral;
+    grid-template-columns: 1fr;
+    list-style-type: none;
+    
+}
+.listaor .item{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 }
 .margend{
     float:right;
-    margin-left:10px;
-    margin-top:3px;
-    margin-right:3px;
-    margin-bottom:3px;
-    width:50px;
+    margin-right:10px;
+}
+.item1{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 }
 .margend1{
     float:right;
-    margin-left:10px;
     margin-right:10px;
-    margin-bottom:10px;
-    width:150px;
-    height:20px;
-}
-#listades{
-    position:relative;
-    top: 0px;
-    left: 0px;
-    margin: 0 auto;
-    height: 14,5%;
-    width: 80%;
-    border:1px solid black;
-    margin-bottom:20px;
-}
-#final{
-    margin:0 auto;
-    height:36%;
-    width:94%;
-    border:1px solid black;
-    margin-bottom:20px;
-}
-#final h4{
-    color:blueviolet;
-    text-align:center;
-}
-#separado{
-    margin:5px;
 }
 
-a:link{
-    color:red; /* Profe aca no veo el rojo en el link, por que */
-}
-a:visited{
-    color:green;
-    display: inline-block;
-}
-a:hover{
-    color:hotpink;
-}
-a:active{
-    color:blue;
-}
+
+
