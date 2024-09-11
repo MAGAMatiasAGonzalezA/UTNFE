@@ -1,0 +1,19 @@
+<form onsubmit="event.preventDefault(); agregarArticulo();">
+    <div class="mb-3">
+        <label for="articulo" class="form-label">Artículo</label>
+        <input type="text" class="form-control" id="articulo" required>
+    </div>
+    <div class="mb-3">
+        <label for="tipo" class="form-label">Tipo</label>
+        <input type="text" class="form-control" id="tipo" required>
+    </div>
+    <div class="mb-3">
+        <label for="estado" class="form-label">Estado</label>
+        <input type="text" class="form-control" id="estado" required>
+    </div>
+    <div class="mb-3">
+        <label for="cantidad" class="form-label">Cantidad</label>
+        <input type="number" class="form-control" id="cantidad" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Agregar Artículo</button>
+</form>
