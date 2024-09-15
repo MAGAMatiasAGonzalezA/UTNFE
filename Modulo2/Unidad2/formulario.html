@@ -1,19 +1,36 @@
-<form onsubmit="event.preventDefault(); agregarArticulo();">
-    <div class="mb-3">
-        <label for="articulo" class="form-label">Artículo</label>
-        <input type="text" class="form-control" id="articulo" required>
-    </div>
-    <div class="mb-3">
-        <label for="tipo" class="form-label">Tipo</label>
-        <input type="text" class="form-control" id="tipo" required>
-    </div>
-    <div class="mb-3">
-        <label for="estado" class="form-label">Estado</label>
-        <input type="text" class="form-control" id="estado" required>
-    </div>
-    <div class="mb-3">
-        <label for="cantidad" class="form-label">Cantidad</label>
-        <input type="number" class="form-control" id="cantidad" required>
-    </div>
-    <button type="submit" class="btn btn-primary">Agregar Artículo</button>
-</form>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body style="background-color: rgb(192, 184, 173);">
+    <form action="trabajo_bootstrap.html" class="container">
+        <fieldset>
+            <legend>Ingresa los datos del nuevo articulo</legend>
+            <ul>
+                <li>
+                    <input type="text" id="articulo" class="form-control"  name="articulo" placeholder="Articulo" required>
+                </li><br>
+                <li>
+                    <input type="text" class="form-control" id="tipo" name="tipo" placeholder="Tipo" required>
+                </li><br>
+                <li>
+                    <input type="text" class="form-control" id="estado" name="estado" placeholder="Estado" required>
+                </li><br>
+                <li>
+                    <input type="number" class="form-control" id="cantidad" name="cantidad" placeholder="Cantidad" required>
+                </li><br>
+                <li class="button">
+                    <button type="submit" class="btn btn-primary">Agregar Artículo</button>
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+
+   
+</body>
+</html>

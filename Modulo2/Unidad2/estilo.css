@@ -1,7 +1,18 @@
 form{
+    background-color: rgb(198, 233, 175);
+    display:column;
     margin-top: 10px;
     padding: 2%; 
-    width: 80%;
+}
+fieldset{
+    background-color: rgb(136, 243, 163);
+}
+input{
+    background-color: aquamarine;
+    color: black ;  
+}
+ul li button{
+    background-color: aquamarine;
 }
 .tabla{
     width: 100%;
@@ -10,10 +21,21 @@ form{
 .carrusel{
     padding: 2%;
     height: 10%;
- 
- 
 }
 .margen{
     margin: 2%;
     padding: 1%;
+}
+.fondo-claro{
+    background-color: aqua;
+}
+.centrar{
+    width:100%;
+    justify-content: center;
+}
+#detalles{
+    margin-bottom: 10px;
+}
+.estilo{
+    width: 4rem;
 }
