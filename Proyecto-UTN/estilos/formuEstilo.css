@@ -1,0 +1,33 @@
+body {
+    background-color: rgb(192, 184, 173);
+}
+form {
+    background-color: rgb(198, 233, 175);
+    display:column;
+    margin-top: 10px;
+    margin-left: 0;
+    padding: 2%; 
+}
+fieldset {
+    background-color: rgb(136, 243, 163);
+    margin: auto auto;
+
+}
+input {
+    width: 250px;
+    background-color: aquamarine;
+    color: black ;  
+}
+ul {
+    list-style: none;
+}
+ul li button {
+    background-color: aquamarine;
+    margin-top: 10px;
+}
+textarea {
+    background-color: aquamarine;
+    color: black;
+    width: 500px;
+    height: 80px;
+}

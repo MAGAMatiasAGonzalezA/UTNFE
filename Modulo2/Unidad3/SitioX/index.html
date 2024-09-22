@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cerveceria X</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/cerveceria.css">
+</head>
+
+<body>
+
+    <!-- BARRA DE NAVEGACION -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">CERVEZA 2024</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Novedades</a>
+                    </li>
+                    <li class="nav-item"></li>
+                    <a class="nav-link" href="#">Nosotros</a>
+                    </li>
+                    <li class="nav-item"></li>
+                    <a class="nav-link" href="#">Conocenos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- FIN BARRA DE NAVEGACION -->
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="container-fluid">
+        <div id="home" class="row align-items-center hero">
+            <div class="col-lg-3 offset-lg-2">
+                <p>Bajada</p>
+                <h1>Titulo Principal</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt at eligendi non voluptate
+                    voluptatem dicta quisquam quod voluptates. Facilis, quam iure? Impedit tempore non vitae, fuga
+                    facilis quae rem facere.</p>
+            </div>
+        </div>
+    </div>
+    <!-- FIN CONTENIDO PRINCIPAL -->
+
+    <!-- INICIO NOVEDADES -->
+    <div class="row my-6">
+
+        <div id="novedades" class="col-md-3 offset-md-2">
+            <h2>Novedades</h2>
+            <ul class="lista-novedades">
+                <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="img/novedades01.jpg"
+                            alt="">Nuevas recetas 1</a></li>
+                <li><a href="#"><img src="img/novedades01.jpg" alt="">Nuevas recetas 2</a></li>
+                <li><a href="#"><img src="img/novedades01.jpg" alt="">Nuevas recetas 3</a></li>
+                <li><a href="#"><img src="img/novedades01.jpg" alt="">Nuevas recetas 4</a></li>
+                <li><a href="#"><img src="img/novedades01.jpg" alt="">Nuevas recetas 5</a></li>
+            </ul>
+        </div>
+        <!--  FIN NOVEDADES -->
+        <!-- INICIO TESTIMONIOS -->
+        <div class="col-md-3 my-3 offset-md-2">
+            <h2 class="text-center">Recetas</h2>
+            <div class="rounded py-5 testimonios" style="display: flex;">
+                <div class="col-5">
+                    <div id="list-example" class="list-group">
+                        <a class="list-group-item list-group-item-action" href="#list-item-1">Nuevas recetas 1</a>
+                        <a class="list-group-item list-group-item-action" href="#list-item-2">Nuevas recetas 2</a>
+                        <a class="list-group-item list-group-item-action" href="#list-item-3">Nuevas recetas 3</a>
+                        <a class="list-group-item list-group-item-action" href="#list-item-4">Nuevas recetas 4</a>
+                        <a class="list-group-item list-group-item-action" href="#list-item-5">Nuevas recetas 5</a>
+                    </div>
+                </div>
+                <div class="scrollp">
+                    <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true"
+                        class="scrollspy-example" tabindex="0">
+                        <h4 id="list-item-1">Nuevas recetas 1</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium ea vel tempore id
+                            quis aspernatur eligendi pariatur repellendus neque nihil! Itaque sequi sunt ipsum
+                            blanditiis beatae in minus mollitia quod!</p>
+                        <h4 id="list-item-2">Nuevas recetas 2</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quae aliquid voluptates
+                            labore asperiores dolorum ullam reiciendis accusantium harum iusto. Natus temporibus eum
+                            recusandae quibusdam distinctio minima at molestias ipsam.</p>
+                        <h4 id="list-item-3">Nuevas recetas 3</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga labore, beatae aliquam hic
+                            ullam, consectetur dolorem ex unde porro architecto, illo laboriosam ipsam deleniti
+                            minima autem aut sed nemo aperiam!</p>
+                        <h4 id="list-item-4">Nuevas recetas 4</h4>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia velit provident
+                            consequuntur quod explicabo at quos quam ipsa! Sequi amet nihil enim asperiores totam
+                            iste sunt doloribus dolorem. Similique, sunt.</p>
+                        <h4 id="list-item-5">Nuevas recetas 5</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A asperiores quasi similique
+                            voluptatum, necessitatibus exercitationem eos aliquam praesentium consectetur placeat
+                            libero obcaecati rem sequi ut vitae corporis quae, delectus blanditiis.</p>
+                    </div>
+                </div>
+            </div>
+        </div><!-- FIN TESTIMONIOS -->
+    </div><!--  CIERRA SECCION DIV -->
+
+    <!-- INICIO MODAL -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">El titulo del modal</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    El cuerpo del modal
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar sin
+                        guardar</button>
+                    <button type="button" class="btn btn-primary">Guardar cambios</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FIN MODAL -->
+
+    <!-- FOOTER -->
+    <footer>
+        <p class="text-center">Diseñado por la profe e investigado por mí</p>
+    </footer>
+    <!-- FIN FOOTER -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

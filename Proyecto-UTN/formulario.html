@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="estilos/formuEstilo.css">
+</head>
+<body style="background-color: rgb(192, 184, 173);">
+    <form action="trabajo_bootstrap.html" class="container">
+        <fieldset>
+            <legend>Ingresa los datos de contacto y resumen de proyecto</legend>
+            <ul>
+                <li>
+                    <input type="text" id="nombre" class="form-control"  name="nombre" placeholder="Nombre" required>
+                </li><br>
+                <li>
+                    <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Apellido" required>
+                </li><br>
+                <li>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+                </li><br>
+                <li>
+                    <input type="tel" class="form-control" id="celular" name="celular" placeholder="Número de contacto">
+                </li><br>
+                <li>
+                    <textarea class="form-control" id="descripcion" rows="3" placeholder="Descripcion de tu pequeño emprendimiento" required></textarea>
+                </li>
+                <li class="button">
+                    <button type="submit" class="btn btn-primary">Agregar Artículo</button>
+                </li>
+
+            </ul>
+        </fieldset>
+    </form>
+
+   
+</body>
+</html>

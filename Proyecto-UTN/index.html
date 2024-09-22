@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios de mantenimiento</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilos/estilos.css">
+</head>
+
+<body>
+
+    <!-- BARRA DE NAVEGACION -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid  fondo-nav">
+            <a class="navbar-brand" href="#">
+                <img src="imagenes/matenimi.jfif" alt="Logo" width="30" height="24"
+                    class="d-inline-block align-text-top">
+                Servicios de Mantenimiento
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#presentacion">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inventario">Pequeños Detalles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#detalles">Historias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#novedades">Conciencia Colectiva</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- FIN BARRA DE NAVEGACION -->
+
+    <!-- PRESENTACION -->
+    <header class="container-fluid">
+        <div class="row align-items-start">
+            <div class="col-6 align-self-center fondo-claro">
+                <div class="scrollp">
+                    <p class="margen text-center">Ofrecemos servicios de mantenimiento integral con una atención
+                        personalizada y profesional. Nos especializamos en reparaciones, mejoras y conservación de
+                        infraestructuras, asegurando que cada espacio funcione de manera óptima. Nuestro equipo está
+                        capacitado para adaptarse a las necesidades de cada cliente, garantizando soluciones rápidas y
+                        eficientes.</p>
+                    <p class="margen text-center">Con años de experiencia en el rubro y un enfoque centrado en la
+                        satisfacción del cliente, nos comprometemos a ofrecer un servicio confiable y de alta calidad.
+                        No
+                        importa el tamaño del proyecto, nuestro objetivo es siempre brindar resultados que superen las
+                        expectativas y mantener un entorno seguro y funcional.</p>
+                </div>
+            </div>
+            <div class="col-6 align-self-center">
+                <img src="imagenes/mantenimiento.jpeg" class="rounded float-start" alt="trabajando" width="100%"
+                    height="300">
+            </div>
+        </div>
+    </header>
+    <!-- FIN PRESENTACION -->
+
+    <!-- CARRUSEL -->
+    <div id="inventario" class="container-fluid text-center carrusel">
+        <div class="row">
+            <div class="col-12">
+                <div id="carouselExampleCaptions" class="carousel slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                            aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+                            aria-label="Slide 5"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="imagenes/carrusel/fotoCarrusel01.png" class="d-block w-100 tamañoCarrusel"
+                                alt="foto prueba">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Servicio de Mantenimiento Integral</h5>
+                                <p>Nos especializamos en la reparación y mantenimiento de todo tipo de instalaciones,
+                                    garantizando calidad y eficiencia.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="imagenes/carrusel/fotoCarrusel02.jpg" class="d-block w-100 tamañoCarrusel"
+                                alt="foto prueba">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Revisión y Diagnóstico</h5>
+                                <p>Nuestros técnicos realizan inspecciones exhaustivas para identificar y solucionar
+                                    problemas en su equipo.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="imagenes/carrusel/fotoCarrusel03.jpg" class="d-block w-100 tamañoCarrusel"
+                                alt="foto prueba">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Mantenimiento Preventivo</h5>
+                                <p>Programa regular de mantenimiento para prevenir fallas y prolongar la vida útil de su
+                                    equipo.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="imagenes/carrusel/fotoCarrusel04.jpg" class="d-block w-100 tamañoCarrusel"
+                                alt="foto prueba">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Equipo de Protección</h5>
+                                <p>Nuestros técnicos utilizan equipo de protección personal para garantizar su seguridad
+                                    durante el trabajo.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="imagenes/carrusel/fotoCarrusel05.jpg" class="d-block w-100 tamañoCarrusel"
+                                alt="foto prueba">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Instalaciones Seguras y Eficientes</h5>
+                                <p>Nuestro técnicos garantizan instalaciones que cumplen con los estandares de seguridad
+                                    y eficiencia.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Siguiente</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FIN CARRUSEL -->
+
+    <!-- TABLA -->
+    <section>
+        <!-- <div class="container-fluid">
+            <h2 class="text-center">Solo consultas</h2>
+            <table class="table table-striped table-hover table-bordered tabla border-primary">
+                <thead>
+                    <th class="text-center">articulo</th>
+                    <th class="text-center">tipo</th>
+                    <th class="text-center">estado</th>
+                    <th class="text-center">cantidad</th>
+                </thead>
+                <tbody id="sumarfila">
+                    <tr class="table-active largo">
+                        <td>martillo</td>
+                        <td>herramienta</td>
+                        <td>usados</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>anteojos</td>
+                        <td>accesorio visual</td>
+                        <td>buen estado</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>zapatillas</td>
+                        <td>calzado</td>
+                        <td>manchadas</td>
+                        <td>1</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="text-center" id="llenarformu"><a href="formulario.html" class="agregar" tabindex="-1"
+                    aria-disabled="true" target="_blank">Agregar articulo</a></p>
+
+        </div> -->
+
+        <!-- PROBANDO MODAL -->
+        <!-- <button type="button" class="btn btn-primary agregar" id="llenarformu" data-bs-toggle="modal"
+            data-bs-target="#exampleModal">
+            Agregar articulo
+        </button>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Formulario de consulta</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" id="modal-body-content">
+                       
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary">Guardar y salir</button>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- PROBANDO MODAL -->
+
+    </section>
+    <!-- FIN TABLA -->
+
+    <!-- ACORDEON -->
+    <div class="container-fluid" id="detalles">
+        <ul class="list-group accordion" id="accordionExample">
+            <h2 class="text-center">Historias de nuestros integrante</h2>
+            <li class="list-group-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        Nuestro Capitan
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p><strong>El Capitan </strong>Tenía 12 años cuando empezo reparando su bicicleta, dando inicio
+                            a su carrera. Sin para de desarmar, reparar y rearmar maquinas. Completo sus instrucción
+                            básica
+                            en una escuela técnica. Enprendiendo su camino entre tornillos, formulas, medidas y
+                            resortes.
+                            Llega a este barco con capacidades natas en el rubro...
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <li class="list-group-item accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        La Copiloto
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p><strong>La Copiloto </strong> Nuestra copiloto es una talentosa y creativa, apasionada por el
+                            diseño y
+                            la fabricación de juguetes interactivos para infantes. Con una visión única, ha desarrollado
+                            productos innovadores que no solo entretienen,
+                            sino que también estimulan el aprendizaje y el desarrollo cognitivo de los más pequeños.
+                            Gracias a su enfoque en la seguridad y la interactividad,
+                            sus juguetes son tanto educativos como divertidos, ayudando a los niños a explorar el mundo
+                            que los rodea de manera lúdica y segura.
+                        </p>
+                    </div>
+            </li>
+            <li class="list-group-item accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Nuestro Operario
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p><strong>Nuestro Operario </strong> Nuestro operario es un apasionado cocinero que descubrió
+                            su vocación más tarde en la vida. Tras dedicarse a otras áreas, decidió seguir su sueño de
+                            estudiar cocina, especializándose en la creación de deliciosas pizzas artesanales. Su amor
+                            por la gastronomía lo llevó a experimentar con ingredientes frescos y técnicas innovadoras,
+                            convirtiendo cada pizza en una obra de arte culinaria. Con creatividad y dedicación, ha
+                            perfeccionado recetas que conquistan los paladares más exigentes.
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <li class="list-group-item accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Nuevo Integrante
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p><strong>El Nuevo</strong> Nuestro nuevo integrante es un entusiasta de la jardinería de
+                            interiores, con una profunda pasión por crear espacios verdes dentro del hogar. Le encanta
+                            cultivar plantas de todo tipo, desde suculentas hasta plantas tropicales, logrando
+                            transformar cualquier rincón en un pequeño oasis. Con un enfoque en el bienestar y la
+                            armonía, disfruta de cuidar cada detalle para mantener las plantas saludables y vibrantes,
+                            contribuyendo a un ambiente más fresco y natural en el hogar.</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- ACORDEON -->
+
+    <!-- INICIO DE SECCION -->
+    <div class="row my-3 grid gap-0 column-gap-6" style="background-color: rgb(202, 247, 232);">
+        <!-- INICIO LISTA DE PROYECTOS -->
+        <div id="novedades" class="col-md-5 offset-md-1 p-2 g-col-6">
+            <h2 class="text-center">Crecemos en Conjunto</h2>
+            <ul class="lista-novedades grid gap-0 row-gap-3">
+                <li class="p-2 g-col-6"><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><img
+                            src="imagenes/enConjunto/malis-caoncito.jpg" alt="">Juegos para niños</a></li>
+                <li class="p-2 g-col-6"><a href="#"><img src="imagenes/enConjunto/3dImpresiones.jpg" alt="">Impresiones
+                        3D</a></li>
+                <li class="p-2 g-col-6"><a href="#"><img src="imagenes/enConjunto/soloPrepizas.jpeg" alt="">Solo
+                        Prepizas</a></li>
+                <li class="p-2 g-col-6"><a href="#"><img src="imagenes/enConjunto/jardin-casa.jpg" alt="">Plantas en
+                        casa</a></li>
+                <li class="p-2 g-col-6"><a href="#"><img src="imagenes/enConjunto/programacio-principiante.jpg"
+                            alt="">Paginas Web
+                        Básicas</a></li>
+            </ul>
+        </div>
+        <!--  FIN LISTA DE PROYECTOS -->
+        <!-- INICIO INVITACION -->
+        <div class="col-md-3 offset-md-1 my-3 p-2 g-col-6">
+            <div class="card colorfondo">
+                <div class="card-body">
+                    <h5 class="card-title text-center">¡Únete a Nuestra Comunidad de Creadores!</h5>
+                    <p class="card-text text-center">¿Tienes un pequeño emprendimiento o una idea innovadora? En
+                        <strong>nuestra
+                            empresa</strong>, creemos en el crecimiento colaborativo y estamos siempre en busca de
+                        nuevos talentos que quieran compartir sus proyectos. No importa si es grande o pequeño, lo
+                        importante es la pasión por lo que haces. ¡Es tu oportunidad de crecer con nosotros!
+                    </p>
+                    <a href="formulario.html" target="_blank" class="btn btn-primary">Formulario de consulta</a>
+                </div>
+            </div>
+        </div> <!-- FIN INVITACION -->
+    </div><!-- FIN DE SECCION -->
+
+
+    <!-- INICIO MODAL -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Malis a jugar</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Juegos interactivos para para niños</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar y
+                        salir</button>
+                    <button type="button" class="btn btn-primary"><a href="https://www.malisajugar.com/" target="_blank"
+                            class="colorTexto">Ir a mirar</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FIN MODAL -->
+
+    <!-- FOOTER -->
+    <footer class="container-fluid">
+        <div class="card text-bg-dark row">
+            <img src="imagenes/casa-herramientas.jpg" class="card-img tamaño" alt="casita con herramientas">
+            <div class="card-img-overlay">
+                <h5 class="card-title colorTexto">Mantenimiento general</h5>
+                <p class="card-text colorTexto">Realizamos mantenimiento en todas sus etapas.</p>
+                <p class="card-text colorTexto"><small>MIL-Mantenimien-TON@gmail.com</small>
+                    <a href="#" class="badge text-bg-primary float-end">INICIO</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- FIN FOOTER -->
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>
