@@ -80,3 +80,27 @@ h1, h2 {
   padding: 10px;
   display: flex;
 }
+.staff {
+  background-color: #efefef;
+}
+.mapa iframe {
+  width: 100%;
+  aspect-ratio: 1.2;
+}
+html {
+  scroll-behavior: smooth;
+}
+.scroll_section {
+  scroll-margin-top: 60px;
+}
+
+.tercerimagen {
+  background: url(../img/historia_3.jpg) no-repeat;
+  background-size: cover;
+  height: 0.5vh;
+  min-height: 250px;
+  color: white;
+}
+
+
+

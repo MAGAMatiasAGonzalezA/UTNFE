@@ -1,3 +1,12 @@
+body {
+  background-color: darkorange;
+}
+
+#principio {
+  width: 98%;
+  margin-left: 1%;
+}
+
 .tabla {
   width: 100%;
   margin-top: 3%;
@@ -21,6 +30,7 @@
 
 .fondo-claro {
   background-color: aqua;
+
 }
 
 .centrar {
@@ -28,32 +38,28 @@
   justify-content: center;
 }
 
-#detalles {
+#historias {
   margin-bottom: 10px;
 }
 
-#detalles ul li {
+#historias ul li {
   background-color: rgb(171, 171, 173);
   
 }
 
-#detalles ul li:hover {
+#historias ul li:hover {
   background-color: rgb(69, 132, 190);
 }
 
-#detalles ul li button {
+#historias ul li button {
   background-color: rgb(144, 211, 250);
-}
-
-.estilo {
-  width: 4rem;
 }
 
 .tamaño {
   background: no-repeat;
   background-size: cover;
   height: 0.5vh;
-  min-height: 130px;
+  min-height: 165px;
   padding: 1%;
 }
 
@@ -119,3 +125,37 @@
 .colorTexto {
   color: #070707;
 }
+
+#liveAlertPlaceholder {
+  margin: 10px;
+}
+
+.scrollBotonera {
+  overflow-y: auto;
+  max-height: 300px;
+}
+
+.botoneraFondo {
+  background: url("../imagenes/botonera_fondo1.png") no-repeat;
+  background-size: cover;
+  height: 0.5vh;
+  min-height: 300px;
+  color: white;
+}
+
+#alerta1, #alerta2, #alerta3, #alerta4 {
+  margin: 5px auto;
+  padding: 5px;
+}
+
+#botonera {
+  margin-left: 5px;
+  padding-left:  3px;
+  box-sizing: border-box;
+}
+
+footer {
+  margin-top: 10px;
+
+}
+

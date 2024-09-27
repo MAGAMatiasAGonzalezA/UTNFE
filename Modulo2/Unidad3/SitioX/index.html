@@ -11,10 +11,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="css/cerveceria.css">
+
 </head>
 
 <body>
-
     <!-- BARRA DE NAVEGACION -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
@@ -27,16 +27,16 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Novedades</a>
+                        <a class="nav-link" href="#novedades">Novedades</a>
                     </li>
                     <li class="nav-item"></li>
-                    <a class="nav-link" href="#">Nosotros</a>
+                    <a class="nav-link" href="#nosotros">Nosotros</a>
                     </li>
                     <li class="nav-item"></li>
-                    <a class="nav-link" href="#">Conocenos</a>
+                    <a class="nav-link" href="#conocenos">Conocenos</a>
                     </li>
                 </ul>
             </div>
@@ -46,7 +46,7 @@
 
     <!-- CONTENIDO PRINCIPAL -->
     <div class="container-fluid">
-        <div id="home" class="row align-items-center hero">
+        <div id="home" class="row align-items-center hero scroll_section">
             <div class="col-lg-3 offset-lg-2">
                 <p>Bajada</p>
                 <h1>Titulo Principal</h1>
@@ -61,7 +61,7 @@
     <!-- INICIO NOVEDADES -->
     <div class="row my-6">
 
-        <div id="novedades" class="col-md-3 offset-md-2">
+        <div id="novedades" class="col-md-3 offset-md-2 scroll_sections" style="margin-top: 15px;">
             <h2>Novedades</h2>
             <ul class="lista-novedades">
                 <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="img/novedades01.jpg"
@@ -135,6 +135,130 @@
         </div>
     </div>
     <!-- FIN MODAL -->
+
+    <!-- INICIO HISTORIAS -->
+    <div id="historia" class="row align-items-center py-4 scroll_section">
+        <div class="col-lg-2 col-md-3 offset-lg-2 d-none d-sm-block">
+            <img src="img/historia_1.jpg" alt="historia 1" class="img-fluid">
+        </div>
+        <div class="col-lg-2 col-md-3 d-none d-sm-block">
+            <img src="img/historia_2.jpg" alt="historia 2" class="img-fluid">
+        </div>
+        <div class="col-12 d-sm-none">
+            <img src="img/historia_3.jpg" alt="historia 2" class="img-fluid">
+        </div>
+        <div class="col-lg-4 col-md-6 mt-4 mt-sm-0 tercerimagen">
+            <h2>Historia</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto aliquid impedit delectus ipsa expedita
+                dolore sint vitae deserunt, temporibus repudiandae praesentium, et incidunt culpa minus facere quae
+                dignissimos modi tenetur?</p>
+        </div>
+    </div>
+    <!-- FIN HISTORIAS -->
+
+    <!-- INICIO GRID CARDS -->
+    <div id="nosotros" class="align-items-stretch my-3 staff py-4 scroll_section">
+        <div class="col-lg-8 offset-lg-2">
+            <h2>Nosotros</h2>
+            <div class="row row-cols-1 row-cols-md-4 g-4">
+                <div class="col">
+                    <div class="card">
+                        <img src="img/nosotros01.jpg" alt="Diana Reyes" class="card-img-top">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Diana Reyes</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam minus, ea
+                            sint unde debitis, similique necessitatibus voluptates dicta labore ipsum deserunt, modi
+                            doloribus enim illum rem nihil! Laborum, odit nemo.</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="img/nosotros02.jpg" alt="Diana Reyes" class="card-img-top">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Juan Gomez</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam minus, ea
+                            sint unde debitis, similique necessitatibus voluptates dicta labore ipsum deserunt, modi
+                            doloribus enim illum rem nihil! Laborum, odit nemo.</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="img/nosotros03.jpg" alt="Diana Reyes" class="card-img-top">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Roberto Zavala</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam minus, ea
+                            sint unde debitis, similique necessitatibus voluptates dicta labore ipsum deserunt, modi
+                            doloribus enim illum rem nihil! Laborum, odit nemo.</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="img/nosotros04.jpg" alt="Diana Reyes" class="card-img-top">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Luciano Figuero</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam minus, ea
+                            sint unde debitis, similique necessitatibus voluptates dicta labore ipsum deserunt, modi
+                            doloribus enim illum rem nihil! Laborum, odit nemo.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <!-- FIN GRID CARDS -->
+
+    <!-- INICIO CONOCENOS -->
+    <div id="conocenos" class="row py-4 scroll_section">
+
+        <div id="visitanos" class="col-md-4 offset-md-2">
+            <h2>Visitanos</h2>
+            <div class="mapa">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.2185680295775!2d-58.422641223878955!3d-34.598634222956214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca7cd54f107b%3A0x88bd8fe0e0b6e3a6!2sCentro%20de%20e-Learning%20UTN%20BA!5e0!3m2!1ses!2sar!4v1727119069696!5m2!1ses!2sar"></iframe>
+            </div>
+        </div>
+        <!-- FIN VISITANOS -->
+
+
+
+        <!-- INICIO FORMULARIO -->
+        <div class="col-md-4 mt-4 mt-sm-0">
+            <h2>Contactanos</h2>
+            <form class="row g-3">
+                <div class="col-md-6">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombre">
+                </div>
+                <div class="col-md-6">
+                    <label for="apellido" class="form-label">Apellido</label>
+                    <input type="text" class="form-control" id="apellido">
+                </div>
+                <div class="col-md-12">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="ingrese@email.com">
+                </div>
+                <div class="col-md-12">
+                    <label for="tel" class="form-label">Tel</label>
+                    <input type="text" class="form-control" id="tel" placeholder="...">
+                </div>
+                <div class="col-md-12">
+                    <!-- <label for="mensaje" class="form-label">Mensaje</label> -->
+                    <textarea name="mensaje" id="mensaje" placeholder="mensaje"></textarea>  
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </div>
+                </div>
+                
+            </form>
+        </div>
+        <!-- FIN FORMULARIO -->
+    </div>
+    <!-- FIN CONOCENOS -->
 
     <!-- FOOTER -->
     <footer>

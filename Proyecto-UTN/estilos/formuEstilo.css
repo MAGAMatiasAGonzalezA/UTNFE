@@ -1,33 +1,48 @@
 body {
     background-color: rgb(192, 184, 173);
 }
+
 form {
     background-color: rgb(198, 233, 175);
-    display:column;
+    display: column;
     margin-top: 10px;
-    margin-left: 0;
-    padding: 2%; 
+    padding: 2%;
+    max-width: 600px;
 }
+
 fieldset {
     background-color: rgb(136, 243, 163);
     margin: auto auto;
 
 }
-input {
+
+#nombre,
+#apellido
+ {
     width: 250px;
     background-color: aquamarine;
-    color: black ;  
+    color: black;
 }
+
 ul {
     list-style: none;
 }
+
 ul li button {
     background-color: aquamarine;
     margin-top: 10px;
 }
-textarea {
+
+#descripcion {
     background-color: aquamarine;
     color: black;
     width: 500px;
     height: 80px;
+}
+
+#email,
+#celular {
+    background-color: aquamarine;
+    color: black;
+    width: 400px;
 }
