@@ -154,8 +154,11 @@ body {
   box-sizing: border-box;
 }
 
-footer {
-  margin-top: 10px;
-
+.contenedorImagen {
+  background: url(../imagenes/mantenimiento1.jpeg) no-repeat;
+  background-size: cover;
+  min-height: 300px; 
+  margin-left: 3%;
+  padding-left: 3%;;
 }
 
