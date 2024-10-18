@@ -1,0 +1,93 @@
+<div class="container text-center margen-inferior">
+    <div class="row justify-content-md-center">
+        <div class="col-md-auto">
+            <form class="form" action="/formulario" method="post" class="container">
+                <fieldset>
+                    <legend>Ingresa los datos de contacto y resumen de proyecto</legend>
+                    <ul>
+                        <li>
+                            <input type="text" id="nombre" class="form-control nombre" name="nombre" placeholder="Nombre"
+                                required>
+                        </li><br>
+                        <li>
+                            <input type="text" class="form-control apellido" id="apellido" name="apellido" placeholder="Apellido"
+                                required>
+                        </li><br>
+                        <li>
+                            <input type="email" class="form-control email" id="email" name="email" placeholder="Email"
+                                required>
+                        </li><br>
+                        <li>
+                            <input type="tel" class="form-control" id="celular" name="celular"
+                                placeholder="Número de contacto">
+                        </li><br>
+                        <li>
+                            <textarea class="form-control" id="descripcion" name="descripcion" rows="3"
+                                placeholder="Descripcion de tu pequeño emprendimiento" required></textarea>
+                        </li>
+                        <li class="button">
+                            <button type="submit" class="btn btn-primary">Agregar Artículo</button>
+                        </li>
+
+                    </ul>
+                </fieldset>
+            </form>
+            <p>{{message}}</p>
+        </div>
+    </div>
+</div>
+
+<!-- INICIO OFFCANVAS (FUERA DEL LIENZO) -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div style="display: flex;flex-direction: column;" class="container">
+            <h5 class="offcanvas-title text-center" id="offcanvasRightLabel">Visitanos o llena el formulario</h5>
+            <div class="offcanvas-body">
+                <!-- INICIO VISITANOS -->
+                <div id="contenedor">
+                    <div id="visitanos">
+                        <h2 class="text-center">Visitanos</h2>
+                        <div class="mapa">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d18572.689336875304!2d-58.43769945377427!3d-34.623914622451004!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca440ec19097%3A0x30b34282ae8fae18!2sParque%20Rivadavia!5e0!3m2!1ses!2sar!4v1727296271069!5m2!1ses!2sar"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <!-- FIN VISITANOS -->
+
+                <!-- INICIO FORMULARIO -->
+                <div>
+                    <h2 class="text-center">Contactanos</h2>
+                    <form id="contactanos" class="row g-3" action="/" method="post">
+                        <div class="col-md-6">
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" name="nombre">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="apellido" class="form-label">Apellido</label>
+                            <input type="text" class="form-control" id="apellido" name="apellido">
+                        </div>
+                        <div class="col-md-12">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="ingrese@email.com">
+                        </div>
+                        <div class="col-md-12">
+                            <label for="tel" class="form-label">Telefono</label>
+                            <input type="text" class="form-control" id="tel" name="tel" placeholder="...">
+                        </div>
+                        <div class="col-12">
+                            <label for="mensaje" class="form-label">Describa brevemente el problema</label>
+                            <textarea name="mensaje" id="mensaje" rows="3" placeholder="Empecemos por aquí"
+                                style="width: 100%;"></textarea>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                        </div>
+                        <p>{{message}}</p>
+                    </form>
+                </div>
+                <!-- FIN FORMULARIO -->
+            </div>
+            <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="offcanvas">Cerrar</button>
+        </div>
+    </div>
+    <!-- FIN OFFCANVAS (FUERA DEL LIENZO) -->

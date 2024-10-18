@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios de mantenimiento</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/stylesheets/formuEstilo.css">
+    <link rel="stylesheet" href="/stylesheets/estilos.css">
+</head>
+
+<body>
+
+    <!-- BARRA DE NAVEGACION -->
+    <div class="container-fluid">
+        <nav id="principio" class="navbar navbar-expand-lg">
+            <div class="container-fluid  fondo-nav">
+                <a class="navbar-brand" href="/">
+                    <img src="images/matenimi.jfif" alt="Logo" width="30" height="24"
+                        class="d-inline-block align-text-top">
+                    Servicios de Mantenimiento
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/#presentacion">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/#detalles">Pequeños Detalles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/#historias">Historias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/#novedades">Conciencia Colectiva</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- FIN BARRA DE NAVEGACION -->
+
+  {{{body}}}
+
+    <!-- FOOTER -->
+    <footer class="container-fluid">
+        <div class="card text-bg-dark row">
+            <img src="images/casa-herramienta1.bmp.png" class="card-img tamaño" alt="casita con herramientas">
+            <div class="card-img-overlay">
+                <h5 class="card-title colorTexto">Mantenimiento general</h5>
+                <p class="card-text colorTexto">Realizamos mantenimiento en todas sus etapas.</p>
+                <p class="card-text colorTexto"><small>MIL-Mantenimien-TON@gmail.com</small></p>
+                <p class="card-text colorTexto"><small>Diseñado por Mafiu...</small>
+                    <a href="/" class="badge text-bg-primary float-end inicio">INICIO</a>
+                    <button type="button" class="btn btn-primary btn-sm badge text-bg-primary float-end" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">CONTACTO</button>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- FIN FOOTER -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
+
+    <!-- INICIO BOTONERA CON ALERTA JS-->
+    <script>
+        const mostrar01 = [
+            `<div class="alert alert-success alert-dismissible" role="alert">`,
+            `   <h4 class="alert-heading text-center">Éxito en la Gestión de Tareas</h4>`,
+            '   <p>Nuestro equipo ha completado con éxito la última tarea de mantenimiento, asegurando un funcionamiento óptimo de todos los sistemas. Agradecemos el esfuerzo y la dedicación de cada miembro.</p>',
+            '   <hr>',
+            '   <p class="mb-0">El compromiso y la colaboración son claves para seguir superando retos y alcanzar nuestros objetivos de equipo.</p>',
+            '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+            '</div>'
+        ]
+        const mostrar02 = [
+            `<div class="alert alert-success alert-dismissible" role="alert">`,
+            `   <h4 class="alert-heading text-center">Trabajo en Equipo: Nuevos Desafíos</h4>`,
+            '   <p>Nos enfrentamos a nuevos desafíos y seguimos fortaleciendo nuestras capacidades colectivas. Gracias al enfoque colaborativo, hemos mejorado nuestros servicios y optimizado los procesos</p>',
+            '   <hr>',
+            '   <p class="mb-0">Recuerda que cada aporte cuenta; juntos alcanzamos mejores resultados y fortalecemos nuestro crecimiento.</p>',
+            '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+            '</div>'
+        ]
+        const mostrar03 = [
+            `<div class="alert alert-success alert-dismissible" role="alert">`,
+            `   <h4 class="alert-heading text-center">Crecimiento y Mejora Continua</h4>`,
+            '   <p>El mantenimiento general se realizó de manera efectiva, minimizando tiempos de inactividad y mejorando la eficiencia operativa. Esto es un testimonio del compromiso y la habilidad del equipo.</p>',
+            '   <hr>',
+            '   <p class="mb-0">La excelencia es un camino continuo. Gracias por su dedicación y profesionalismo en cada tarea realizada.</p>',
+            '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+            '</div>'
+        ]
+        const mostrar04 = [
+            `<div class="alert alert-success alert-dismissible" role="alert">`,
+            `   <h4 class="alert-heading text-center">Actualización de Mantenimiento</h4>`,
+            '   <p>La intervención fue exitosa, cumpliendo con los estándares de calidad esperados. Continuamos trabajando juntos para superar expectativas y ofrecer soluciones efectivas.</p>',
+            '   <hr>',
+            '   <p class="mb-0">Cada mejora en nuestros procesos refleja el esfuerzo colectivo. Sigamos trabajando con la misma energía y dedicación.</p>',
+            '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+            '</div>'
+        ]
+
+        function agregarDiv(identificador, etiqueta, botonalerta) {
+            const mostrar = document.getElementById(identificador);
+            const alerta = (type) => {
+                const nuevoDiv = document.createElement('div');
+                nuevoDiv.innerHTML = etiqueta.join('');
+                mostrar.append(nuevoDiv);
+            }
+
+            const dispararAlerta = document.getElementById(botonalerta);
+            if (dispararAlerta) {
+                dispararAlerta.addEventListener('click', () => {
+                    alerta('success');
+                })
+            }
+        }
+
+        agregarDiv('mostrar1', mostrar01, 'alerta1')
+        agregarDiv('mostrar2', mostrar02, 'alerta2')
+        agregarDiv('mostrar3', mostrar03, 'alerta3')
+        agregarDiv('mostrar4', mostrar04, 'alerta4')
+    </script>
+    <!-- FIN BOTONERA CON ALERTA JS-->
+
+    <!-- INICIO TOSTADA JS-->
+    <script>
+        let seleccionoTostada = document.getElementById("liveToast");
+        let mostararTostada = new bootstrap.Toast(seleccionoTostada, () => { autohide: false });
+        mostararTostada.show();
+    </script>
+    <!-- FIN TOSTADA JS-->
+
+    <!-- INICIO TIEMPO EN TOSTADA JS-->
+    <script>
+        function myFunc() {
+            var ahora = new Date();
+            var tiempo = ahora.getDate() + "-" + (ahora.getMonth() + 1) + "-" + ahora.getFullYear() + " " + ahora.getHours() + ":" + ahora.getMinutes() + ":" + ahora.getSeconds();
+            document.getElementById('display-tiempo').innerHTML = tiempo;
+        }
+        setInterval(myFunc, 1000);
+    </script>
+    <!-- FIN TIEMPO EN TOSTADA JS-->
+
+
+</body>
+
+</html>

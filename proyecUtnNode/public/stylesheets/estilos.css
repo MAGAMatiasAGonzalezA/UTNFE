@@ -1,0 +1,180 @@
+body {
+  background-color: darkorange;
+}
+
+#principio {
+  width: 98%;
+  margin-left: 1%;
+}
+
+.tabla {
+  width: 100%;
+  margin-top: 3%;
+}
+
+.scrollp {
+  height: 300px;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.carrusel {
+  padding: 2%;
+  height: 10%;
+}
+
+.margen {
+  margin: 2%;
+  padding: 1%;
+}
+
+.fondo-claro {
+  background-color: aqua;
+
+}
+
+.centrar {
+  width: 100%;
+  justify-content: center;
+}
+
+#historias {
+  margin-bottom: 10px;
+}
+
+#historias ul li {
+  background-color: rgb(171, 171, 173);
+  
+}
+
+#historias ul li:hover {
+  background-color: rgb(69, 132, 190);
+}
+
+#historias ul li button {
+  background-color: rgb(144, 211, 250);
+}
+
+.tamaño {
+  background: no-repeat;
+  background-size: cover;
+  height: 0.5vh;
+  min-height: 165px;
+  padding: 1%;
+}
+
+.fondo-nav {
+  background-color: rgb(175, 114, 231);
+}
+
+.tamañoCarrusel {
+  min-height: 300px;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+#novedades {
+  background-color: rgb(202, 247, 232);
+}
+
+.lista-novedades {
+  margin: 1px;
+  padding: 0;
+  list-style: none;
+}
+
+.lista-novedades li {
+  margin: 5px 0;
+}
+
+.lista-novedades li a {
+  background-color: rgb(202, 247, 232);
+  font-family: "Alfa Slab One", cursive;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #a0a0a0;
+  transition: all .2s ease-in-out;
+  display: block;
+}
+
+.lista-novedades li a:hover {
+  color: #212529;
+  background-color: #dadada;
+}
+
+.lista-novedades li a img {
+  width: 120px;
+  height: 50px;
+  filter: grayscale();
+  transition: all .2s ease-in-out;
+  margin-right: 1rem;
+  opacity: 0.7;
+}
+
+.lista-novedades li a:hover img {
+  filter: none;
+  margin-right: 1.4rem;
+  opacity: 1;
+}
+
+.colorfondo {
+  width: 18rem;
+  background-color: rgb(202, 247, 232);
+}
+
+.colorfondo:hover {
+  background-color: rgb(144, 211, 250);
+}
+
+.colorTexto {
+  color: #070707;
+}
+
+#liveAlertPlaceholder {
+  margin: 10px;
+}
+
+.scrollBotonera {
+  overflow-y: auto;
+  max-height: 300px;
+}
+
+.botoneraFondo {
+  background: url("/images/botonera_fondo1.png") no-repeat;
+  background-size: cover;
+  height: 0.5vh;
+  min-height: 300px;
+  color: white;
+}
+
+#alerta1, #alerta2, #alerta3, #alerta4 {
+  margin: 5px auto;
+  padding: 5px;
+}
+
+#botonera {
+  margin-left: 5px;
+  padding-left:  3px;
+  box-sizing: border-box;
+}
+
+.contenedorImagen {
+  background: url(/images/mantenimiento1.jpeg) no-repeat;
+  background-size: cover;
+  min-height: 300px; 
+  margin-left: 3%;
+  padding-left: 3%;;
+}
+
+.mapa {
+  margin-left: 10px;
+}
+
+#offcanvasRight {
+  background-color: bisque;
+}
+
+.inicio {
+  text-decoration: none;
+  height: 22px;
+}
