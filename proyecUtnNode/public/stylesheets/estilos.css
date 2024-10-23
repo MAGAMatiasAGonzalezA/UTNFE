@@ -1,10 +1,12 @@
 body {
-  background-color: darkorange;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 #principio {
-  width: 98%;
-  margin-left: 1%;
+  margin-top: 0;
+  padding-top: 0;
 }
 
 .tabla {
@@ -12,15 +14,39 @@ body {
   margin-top: 3%;
 }
 
+.contenedor-margen {
+  margin: 0;
+  padding: 0;
+}
+
+.fondo-pres {
+  background: url("../images/mantenimiento1.jpeg") no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 0.5vh;
+  min-height: 500px;
+  overflow: hidden;
+  color: beige;
+  font-size: 25px;
+}
+
+h1 {
+  color: rgb(236, 236, 52);
+}
+
 .scrollp {
-  height: 300px;
+  max-height: 500px;
   overflow-y: auto;
   padding: 10px;
 }
 
+.scrollp p:hover {
+  color: black;
+}
+
 .carrusel {
-  padding: 2%;
-  height: 10%;
+  margin: 5px 0;
+  padding: 5px 0;
 }
 
 .margen {
@@ -42,11 +68,6 @@ body {
   margin-bottom: 10px;
 }
 
-#historias ul li {
-  background-color: rgb(171, 171, 173);
-  
-}
-
 #historias ul li:hover {
   background-color: rgb(69, 132, 190);
 }
@@ -64,7 +85,7 @@ body {
 }
 
 .fondo-nav {
-  background-color: rgb(175, 114, 231);
+  background-color: rgb(147, 142, 79);
 }
 
 .tamañoCarrusel {
@@ -128,6 +149,7 @@ body {
 
 .colorTexto {
   color: #070707;
+  text-decoration: none;
 }
 
 #liveAlertPlaceholder {
@@ -136,26 +158,27 @@ body {
 
 .scrollBotonera {
   overflow-y: auto;
-  max-height: 300px;
+  max-height: 425px;
 }
 
 .botoneraFondo {
   background: url("/images/botonera_fondo1.png") no-repeat;
   background-size: cover;
   height: 0.5vh;
-  min-height: 300px;
+  min-height: 450px;
   color: white;
 }
 
 #alerta1, #alerta2, #alerta3, #alerta4 {
-  margin: 5px auto;
-  padding: 5px;
+  margin: 3px 0;
+  padding: 3px 0; 
 }
 
 #botonera {
-  margin-left: 5px;
-  padding-left:  3px;
+  margin: 3px;
+  padding: 3px;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .contenedorImagen {
@@ -172,6 +195,11 @@ body {
 
 #offcanvasRight {
   background-color: bisque;
+}
+
+.encolumna {
+  display: flex;
+  flex-direction: column;
 }
 
 .inicio {

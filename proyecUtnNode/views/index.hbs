@@ -1,9 +1,9 @@
 
     <!-- PRESENTACION -->
-    <header id="presentacion" class="container-fluid">
-        <div class="row row-cols-2 align-items-start margen">
-            <div class="col-6 align-self-center fondo-claro rounded scrollp">
-                <div>
+    <section id="presentacion" class="container-fluid contenedor-margen">
+            <div class="fondo-pres">
+                <div class="scrollp">
+                    <h1 class="text-center">Servicio de Mantenimiento General</h1>
                     <p class="margen text-center">Ofrecemos servicios de mantenimiento integral con una atención
                         personalizada y profesional. Nos especializamos en reparaciones, mejoras y conservación de
                         infraestructuras, asegurando que cada espacio funcione de manera óptima. Nuestro equipo está
@@ -16,17 +16,12 @@
                         expectativas y mantener un entorno seguro y funcional.</p>
                 </div>
             </div>
-            <div class="col-6">
-                <div class="contenedorImagen rounded">
-                </div>
-            </div>
-        </div>
-    </header>
+    </section>
     <!-- FIN PRESENTACION -->
 
     <!-- CARRUSEL -->
     <div id="detalles" class="container-fluid text-center carrusel">
-        <div class="row">
+        <div class="row ">
             <div class="col-12">
                 <div id="carouselExampleCaptions" class="carousel slide">
                     <div class="carousel-indicators">
@@ -106,8 +101,8 @@
     <!-- FIN CARRUSEL -->
 
     <!-- ACORDEON -->
-    <div id="historias" class="container-fluid">
-        <ul class="list-group accordion" id="accordionExample">
+    <div id="historias" class="container-fluid contenedor-margen">
+        <ul class="list-group accordion rounded" id="accordionExample">
             <h2 class="text-center">Historias de nuestros integrante</h2>
             <li class="list-group-item">
                 <h2 class="accordion-header">
@@ -116,7 +111,7 @@
                         Nuestro Capitan
                     </button>
                 </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         <p><strong>El Capitan </strong>Tenía 12 años cuando empezo reparando su bicicleta, dando inicio
                             a su carrera. Sin para de desarmar, reparar y rearmar maquinas. Completo sus instrucción
@@ -196,7 +191,7 @@
             <h2 class="text-center">Crecemos en Conjunto</h2>
             <ul class="lista-novedades grid gap-0 row-gap-3">
                 <li class="p-2 g-col-6"><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><img
-                            src="/images/enConjunto/malis-caoncito.jpg" alt="">Juegos para niños</a></li>
+                            src="/images/enConjunto/malis-caoncito.jpg" alt="Malis">Juegos para niños</a></li>
                 <li class="p-2 g-col-6"><a href="#"><img src="/images/enConjunto/3dImpresiones.jpg" alt="">Impresiones
                         3D</a></li>
                 <li class="p-2 g-col-6"><a href="#"><img src="/images/enConjunto/soloPrepizas.jpeg" alt="">Solo
@@ -226,7 +221,6 @@
         </div> <!-- FIN INVITACION -->
     </div><!-- FIN DE SECCION -->
 
-
     <!-- INICIO MODAL -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -250,7 +244,7 @@
     <!-- FIN MODAL -->
 
     <!-- INICIO BOTONERA CON ALERTA -->
-    <div id="botonera" class=" text-center">
+    <div id="botonera" class="text-center contenedor-margen">
         <div class="row row-cols-4 botoneraFondo">
             <div id="mostrar1" class="col scrollBotonera">
                 <button type="button" class="btn btn-primary" id="alerta1">Colaboración</button>
@@ -268,33 +262,13 @@
     </div>
     <!-- FIN BOTONERA CON ALERTA -->
 
-    <!-- INICIO TOSTADA -->
-    <div class="toast-container position-fixed bottom-0 p-3">
-        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true"
-            data-bs-autohide="false">
-            <div class="toast-header">
-                <img src="/images/botonera_fondo.png" class="rounded me-2" alt="fotito" width="30" height="24">
-                <strong class="me-auto">Consultas Matenimiento</strong>
-                <small>
-                    <p id="display-tiempo"></p>
-                </small>
-            </div>
-            <div class="toast-body">
-                <p>Deja una pequeña descripcción de tu problema en el formulario o encuentranos por aquí.</p>
-                <div class="mt-2 pt-2 border-top">
-                    <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Vamos allá</button>
-                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="toast">Cerrar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- FIN TOSTADA -->
-
     <!-- INICIO OFFCANVAS (FUERA DEL LIENZO) -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-        <div style="display: flex;flex-direction: column;" class="container">
-            <h5 class="offcanvas-title text-center" id="offcanvasRightLabel">Visitanos o llena el formulario</h5>
+        <div  class="container encolumna">
+            <div class="offcanvas-header">
+                <h5 id="offcanvasRightLabel" class="text-ceter">Visitanos o llena el formulario</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
             <div class="offcanvas-body">
                 <!-- INICIO VISITANOS -->
                 <div id="contenedor">
@@ -330,18 +304,45 @@
                         </div>
                         <div class="col-12">
                             <label for="mensaje" class="form-label">Describa brevemente el problema</label>
-                            <textarea name="mensaje" id="mensaje" rows="3" placeholder="Empecemos por aquí"
+                            <textarea name="mensaje" id="mensaje" rows="3" placeholder="Breve descripción del problema"
                                 style="width: 100%;"></textarea>
                         </div>
                         <div class="col-12">
-                            <button type="submit" class="btn btn-primary">Enviar</button>
+                            <button type="submit" class="btn btn-primary float-end">Enviar</button>
                         </div>
+
                         <p>{{message}}</p>
                     </form>
                 </div>
                 <!-- FIN FORMULARIO -->
             </div>
-            <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="offcanvas">Cerrar</button>
+            {{!-- <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="offcanvas">Cerrar</button> --}}
+                                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="offcanvas">Cerrar</button>
         </div>
     </div>
     <!-- FIN OFFCANVAS (FUERA DEL LIENZO) -->
+
+    <!-- INICIO TOSTADA -->
+    <div class="toast-container position-fixed bottom-0 p-3">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true"
+            data-bs-autohide="false">
+            <div class="toast-header">
+                <img src="/images/botonera_fondo.png" class="rounded me-2" alt="fotito" width="30" height="24">
+                <strong class="me-auto">Consultas Matenimiento</strong>
+                <small>
+                    <p id="display-tiempo"></p>
+                </small>
+            </div>
+            <div class="toast-body">
+                <p>Deja una pequeña descripcción de tu problema en el formulario o encuentranos por aquí.</p>
+                <div class="mt-2 pt-2 border-top">
+                    <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Vamos allá</button>
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="toast">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FIN TOSTADA -->
+
+    

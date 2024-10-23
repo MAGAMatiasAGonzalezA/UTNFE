@@ -1,9 +1,8 @@
-body {
+/* body {
     background-color: rgb(192, 184, 173);
-}
+} */
 
 .form {
-    background-color: rgb(198, 233, 175);
     display: column;
     margin-top: 10px;
     padding: 2%;
@@ -11,7 +10,7 @@ body {
 }
 
 fieldset {
-    background-color: rgb(136, 243, 163);
+    background-color: rgb(238, 214, 180);
     margin: auto auto;
     overflow: hidden;
 }
@@ -20,7 +19,6 @@ fieldset {
 .apellido
  {
     width: 250px;
-    background-color: aquamarine;
     color: black;
 }
 
@@ -29,12 +27,10 @@ ul {
 }
 
 ul li button {
-    background-color: aquamarine;
     margin-top: 10px;
 }
 
 #descripcion {
-    background-color: aquamarine;
     color: black;
     width: 95%;
     height: 80px;
@@ -42,7 +38,6 @@ ul li button {
 
 .email,
 #celular {
-    background-color: aquamarine;
     color: black;
     width: 400px;
 }

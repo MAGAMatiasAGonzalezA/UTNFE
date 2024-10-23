@@ -1,8 +1,10 @@
+<link rel="stylesheet" href="/stylesheets/formuEstilo.css">
+
 <div class="container text-center margen-inferior">
     <div class="row justify-content-md-center">
         <div class="col-md-auto">
             <form class="form" action="/formulario" method="post" class="container">
-                <fieldset>
+                <fieldset class="rounded">
                     <legend>Ingresa los datos de contacto y resumen de proyecto</legend>
                     <ul>
                         <li>
@@ -40,7 +42,10 @@
 <!-- INICIO OFFCANVAS (FUERA DEL LIENZO) -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
         <div style="display: flex;flex-direction: column;" class="container">
-            <h5 class="offcanvas-title text-center" id="offcanvasRightLabel">Visitanos o llena el formulario</h5>
+            <div class="offcanvas-header">
+                <h5 id="offcanvasRightLabel" class="text-ceter">Visitanos o llena el formulario</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
             <div class="offcanvas-body">
                 <!-- INICIO VISITANOS -->
                 <div id="contenedor">
