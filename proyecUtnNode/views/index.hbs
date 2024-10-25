@@ -38,7 +38,7 @@
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="/images/carrusel/fotoCarrusel01.png" class="d-block w-100 tamañoCarrusel"
+                            <img src="images/carrusel/fotoCarrusel01.png" class="d-block w-100 tamañoCarrusel"
                                 alt="foto prueba">
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>Servicio de Mantenimiento Integral</h5>
@@ -190,9 +190,9 @@
         <div class="col-md-5 offset-md-1 p-2 g-col-6">
             <h2 class="text-center">Crecemos en Conjunto</h2>
             <ul class="lista-novedades grid gap-0 row-gap-3">
-                <li class="p-2 g-col-6"><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><img
+                <li class="p-2 g-col-6"><a href="#" data-bs-toggle="modal" data-bs-target="#primerModal"><img
                             src="/images/enConjunto/malis-caoncito.jpg" alt="Malis">Juegos para niños</a></li>
-                <li class="p-2 g-col-6"><a href="#"><img src="/images/enConjunto/3dImpresiones.jpg" alt="">Impresiones
+                <li class="p-2 g-col-6"><a href="#" data-bs-toggle="modal" data-bs-target="#segundoModal"><img src="/images/enConjunto/3dImpresiones.jpg" alt="">Impresiones
                         3D</a></li>
                 <li class="p-2 g-col-6"><a href="#"><img src="/images/enConjunto/soloPrepizas.jpeg" alt="">Solo
                         Prepizas</a></li>
@@ -221,12 +221,12 @@
         </div> <!-- FIN INVITACION -->
     </div><!-- FIN DE SECCION -->
 
-    <!-- INICIO MODAL -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- INICIO MODAL Malis-->
+    <div class="modal fade" id="primerModal" tabindex="-1" aria-labelledby="malis" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Malis a jugar</h1>
+                    <h1 class="modal-title fs-5" id="malis">Malis a jugar</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -241,7 +241,35 @@
             </div>
         </div>
     </div>
-    <!-- FIN MODAL -->
+    <!-- FIN MODAL Malis-->
+
+    <!-- INICIO MODAL Impresione3D-->
+    <div class="modal fade" id="segundoModal" tabindex="-1" aria-labelledby="impresiones3d" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="impresiones3d">Impresiones 3D</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Impresiones 3D de todo tipo</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar y
+                        salir</button>
+                    <button type="button" class="btn btn-primary"><a href="/impresiones3D" target="_blank"
+                            class="colorTexto">Ir a mirar</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FIN MODAL Impresione3D-->
+
+
+
+
+
+
 
     <!-- INICIO BOTONERA CON ALERTA -->
     <div id="botonera" class="text-center contenedor-margen">
