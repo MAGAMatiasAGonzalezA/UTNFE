@@ -30,8 +30,24 @@ body {
   font-size: 25px;
 }
 
-h1 {
+#primerModal h1 {
   color: rgb(236, 236, 52);
+}
+
+#segundoModal h1 {
+  color: blue;
+}
+
+#tercerModal h1 {
+  color: rgb(194, 123, 123);
+}
+
+#cuartoModal h1 {
+  color: green;
+}
+
+#quintoModal h1 {
+  color: orangered;
 }
 
 .scrollp {

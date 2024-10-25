@@ -1,0 +1,55 @@
+<link rel="stylesheet" href="/stylesheets/prepizas.css">
+
+<h1 class='text-center'>En nuestros servicios incluimos el contacto con nuestros pequeños emprendedores</h1>
+
+
+
+
+
+
+<!-- INICIO OFFCANVAS (FUERA DEL LIENZO) -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div style="display: flex;flex-direction: column;" class="container">
+        <div class="offcanvas-header">
+            <h5 id="offcanvasRightLabel" class="text-center">Llena el formulario para más detalles</h5>
+        </div>
+        <div class="offcanvas-body">
+
+            <!-- INICIO FORMULARIO -->
+            <div>
+                <h2 class="text-center">Contactanos</h2>
+                <form id="contactanos" class="row g-3" action="prepizas" method="post">
+                    <div class="col-md-6">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="apellido" class="form-label">Apellido</label>
+                        <input type="text" class="form-control" id="apellido" name="apellido">
+                    </div>
+                    <div class="col-md-12">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email"
+                            placeholder="ingrese@email.com">
+                    </div>
+                    <div class="col-md-12">
+                        <label for="tel" class="form-label">Telefono</label>
+                        <input type="text" class="form-control" id="tel" name="tel" placeholder="...">
+                    </div>
+                    <div class="col-12">
+                        <label for="mensaje" class="form-label">Alguna forma o tamaño en especial para tus prepizas de hoy</label>
+                        <textarea name="mensaje" id="mensaje" rows="3" placeholder="Como quieres tus prepizas"
+                            style="width: 100%;"></textarea>
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary float-end">Enviar</button>
+                    </div>
+                    <p class="text-center">{{message}}</p>
+                </form>
+            </div>
+            <!-- FIN FORMULARIO -->
+        </div>
+        <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="offcanvas">Cerrar</button>
+    </div>
+</div>
+<!-- FIN OFFCANVAS (FUERA DEL LIENZO) -->

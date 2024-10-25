@@ -4,10 +4,10 @@ var router = express.Router();
 var nodemailer = require('nodemailer');
 
 router.get('/', function(req, res, next) {
-    res.render('impresiones3D');
+    res.render('jardineria');
 });
 
-/* POST impresiones3D formulario page. */
+/* POST jardineria formulario page. */
 router.post('/', async (req, res, next ) => {
 
     var nombre = req.body.nombre;
@@ -19,7 +19,7 @@ router.post('/', async (req, res, next ) => {
     var obj = {
       to: 'mafiulalala@gamil.com',
       subject: 'Contacto desde la web',
-      html: nombre + ' ' + apellido + ' se contacto a traves del formulario en impresiones 3D y quiere más información a este correo: ' + email +
+      html: nombre + ' ' + apellido + ' se contacto a traves del formulario de jardineria y quiere más información a este correo: ' + email +
       '<br> Ademas, hizo el siguiente comentario: ' + mensaje + '. <br> Su telefono es ' + telefono
     }; //cierra var objeto
   
@@ -34,11 +34,9 @@ router.post('/', async (req, res, next ) => {
   
     var info = await transporter.sendMail(obj);
   
-    res.render('impresiones3D', {
-      message: 'Mensaje enviado correctamente, pronto responderemos tu consulta',
+    res.render('jardineria', {
+      message: 'Plantaste tu primer semilla, pronto crecera con un mensaje de respuesta',
     });
   }); // cierra petición  del post
-
-  
 
 module.exports = router;

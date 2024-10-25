@@ -9,6 +9,9 @@ require('dotenv').config();
 var indexRouter = require('./routes/index');
 var formularioRouter = require('./routes/formulario');
 var impresiones3DRouter = require('./routes/impresiones3D');
+var jardineriaDRouter = require('./routes/jardineria');
+var pagwebRouter = require('./routes/pagweb');
+var prepizasRouter = require('./routes/prepizas');
 
 var app = express();
 
@@ -25,6 +28,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/formulario', formularioRouter);
 app.use('/impresiones3D', impresiones3DRouter);
+app.use('/jardineria', jardineriaDRouter);
+app.use('/pagweb', pagwebRouter);
+app.use('/prepizas', prepizasRouter);
 
 
 // catch 404 and forward to error handler

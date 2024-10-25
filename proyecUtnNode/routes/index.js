@@ -20,7 +20,7 @@ router.post('/', async (req, res, next ) => {
   var obj = {
     to: 'mafiulalala@gamil.com',
     subject: 'Contacto desde la web',
-    html: nombre + ' ' + apellido + ' se contacto a traves del formulario y quiere más información a este correo: ' + email +
+    html: nombre + ' ' + apellido + ' se contacto a traves del formulario de Mantenimiento y quiere más información a este correo: ' + email +
     '<br> Ademas, hizo el siguiente comentario: ' + mensaje + '. <br> Su telefono es ' + telefono
   }; //cierra var objeto
 
