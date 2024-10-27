@@ -1,3 +1,10 @@
+
+
 h1 {
     color: orangered;
+}
+
+.carousel-item img {
+    height: 500px;
+    width: 100%; 
 }

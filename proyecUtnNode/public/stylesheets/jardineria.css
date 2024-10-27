@@ -1,3 +1,8 @@
 h1 {
     color: green;
 }
+
+.carousel-item img {
+    height: 500px;
+    width: 100%; 
+}

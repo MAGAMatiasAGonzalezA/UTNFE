@@ -1,3 +1,14 @@
 h1 {
     color: rgb(194, 123, 123);
 }
+
+#carouselPrepizas {
+    min-height: 500px;
+    max-height: 600px;
+}
+
+.carousel-item img {
+    height: 500px;
+    max-height: 600px;
+    width: 100%; 
+}
