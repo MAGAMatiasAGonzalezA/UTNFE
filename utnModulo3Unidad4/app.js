@@ -72,9 +72,6 @@ app.get('/', function (req, res) {
     hobby: req.session.hobby,
     sumando: sumando
   });
-
-  
-
 });
 
 app.post('/ingresar', function(req, res) {
