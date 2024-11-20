@@ -1,0 +1,27 @@
+<div class="container" style="margin: 100px auto;">
+    <div class="row">
+        <div class="col">
+            <form action="/admin/register" method="post">
+                <div class="form-group">
+                    <label for="usuario">Usuario</label>
+                    <input type="text" class="form-control" id="usuario" arial-describedby="emailHelp" name="usuario">
+
+                </div>
+                <div class="for-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password">
+                </div>
+                <div class="for-group">
+                    <label for="passwordR">Repite tu Password</label>
+                    <input type="password" class="form-control" id="passwordR" name="passwordR">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Enviar</button>
+
+            </form>
+            {{#if error}}
+                <p>{{error}}</p>
+            {{/if}}
+        </div>
+    </div>
+</div>

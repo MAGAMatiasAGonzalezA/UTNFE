@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 require('dotenv').config();
+var session = require('express-session');
 
 var indexRouter = require('./routes/index');
 var formularioRouter = require('./routes/formulario');
@@ -12,6 +13,9 @@ var impresiones3DRouter = require('./routes/impresiones3D');
 var jardineriaDRouter = require('./routes/jardineria');
 var pagwebRouter = require('./routes/pagweb');
 var prepizasRouter = require('./routes/prepizas');
+var loginRouter = require('./routes/admin/login');
+var adminRouter = require('./routes/admin/recetario');
+var registerRouter = require('./routes/admin/register');
 
 var app = express();
 
@@ -25,13 +29,33 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(session({
+  secret: 'ab12cd34ef56gh78ij90',
+  resave: false,
+  saveUninitialized: true
+}));
+
+secured = async (req, res, next) => {
+  try {
+    if(req.session.id_usuario) {
+      next();
+    } else {
+      res.redirect('/admin/login');
+    }
+  } catch(error) {
+    //console.log(error);
+  }
+};
+
 app.use('/', indexRouter);
 app.use('/formulario', formularioRouter);
 app.use('/impresiones3D', impresiones3DRouter);
 app.use('/jardineria', jardineriaDRouter);
 app.use('/pagweb', pagwebRouter);
 app.use('/prepizas', prepizasRouter);
-
+app.use('/admin/login', loginRouter);
+app.use('/admin/recetario', secured, adminRouter);
+app.use('/admin/register', registerRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
