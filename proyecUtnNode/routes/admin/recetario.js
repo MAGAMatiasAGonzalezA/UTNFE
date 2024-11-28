@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var inventarioRouter = require('./inventario');
 
 router.get('/', function(req, res, next) {
     res.render('admin/recetario', {
@@ -8,7 +9,6 @@ router.get('/', function(req, res, next) {
     });
 });
 
-
-
+router.use('/inventario', inventarioRouter);
 
 module.exports = router;

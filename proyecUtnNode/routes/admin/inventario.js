@@ -1,25 +1,25 @@
 var express = require('express');
 var router = express.Router();
-var novedadesModel = require('./../../models/novedadesModel');
+var inventarioModel = require('./../../models/inventarioModel');
 
-// para mostrar la BD
+// mostrar BD
 router.get('/', async function(req, res, next) {
-    
-    var novedades = await novedadesModel.getNovedades();
-    res.render('admin/novedades', {
+    var inventario = await inventarioModel.getInventario();
+    res.render('admin/inventario', {
         layout: 'admin/layout',
         usuario: req.session.nombre,
-        novedades
+        inventario
     });
 });
-
 
 // para eliminar una fila
 router.get('/eliminar/:id', async (req, res, next) => {
     const id = req.params.id;
-    await novedadesModel.deleteNovedadById(id);
-    res.redirect('/admin/novedades');
+    await inventarioModel.deleteInventarioById(id);
+    res.redirect('/admin/recetario/inventario');
 });
+
+
 
 
 module.exports = router;

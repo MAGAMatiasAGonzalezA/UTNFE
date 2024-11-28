@@ -17,6 +17,7 @@ var loginRouter = require('./routes/admin/login');
 var adminRouter = require('./routes/admin/recetario');
 var registerRouter = require('./routes/admin/register');
 
+
 var app = express();
 
 // view engine setup
@@ -56,6 +57,7 @@ app.use('/prepizas', prepizasRouter);
 app.use('/admin/login', loginRouter);
 app.use('/admin/recetario', secured, adminRouter);
 app.use('/admin/register', registerRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

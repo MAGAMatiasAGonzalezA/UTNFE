@@ -1,27 +1,31 @@
-
-
-
+<br>
+<br>
+<br>
+<br>
+<p>Invetario mercaderia</p>
+<br>
+<br>
+<br>
 <div class="container" style="margin-top: 100px;">
     {{!-- fila 1 --}}
     <div class="row">
         <div class="col">
             <p class="text-end">
                 <span>Hola {{usuario}}!</span>
-                <a href="/admin/login/logout" class="fbtn btn-danger">Cerrar sesión
-                    <i class="fas fa-sign-out-alt"></i>
+                <a href="/admin/login/logout" class="btn btn-danger">Cerrar sesión
+                    <i class="fa fa-sign-out-alt"></i>
                 </a>
             </p>
         </div>
     </div>
-    {{!-- fin fila 1 --}}
-    {{!-- INICIO fila 2 --}}
+     {{!-- fin fila 1 --}}
+     {{!-- INICIO fila 2 --}}
     <div class="row">
         <div class="col-7">
-            <h3>Listado de Novedades</h3>
+            <h3>Listado de materiales</h3>
         </div>
         <div class="col-2 text-right">
             <a href="#" class="btn btn-success"> <i class="fa fa-plus">
-
                 </i>Nuevo</a>
         </div>
     </div>
@@ -33,20 +37,25 @@
                 <thead class="thead-dark">
                     <tr>
                         <th scope="col">#</th>
-                        <th scope="col">Título</th>
-                        <th scope="col" class="text-center">Acciones</th>
+                        <th scope="col" class="text-center">Usuario</th>
+                        <th scope="col" class="text-center">Item</th>
+                        <th scope="col" class="text-center">Cantidad</th>
+                        <th scope="col" class="text-center">Fecha</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {{#each novedades}}
+                    {{#each inventario}}
                     <tr>
-                        <th scope="row">{{id}}</th>
-                        <td>{{titulo}}</td>
+                        <th scope="row">{{inventario_id}}</th>
+                        <td>{{usuario}}</td>
+                        <td>{{item_nombre}}</td>
+                        <td>{{cantidad}}</td>
+                        <td>{{fecha}}</td>
                         <td class="text-center">
                             <a href="#" title="Editar" class="btn btn-sm btn-secondary">
                                 <i class="fa fa-pencil"></i>
                             </a>
-                            <a href="/admin/novedades/eliminar/{{id}}" title="Eliminar"
+                            <a href="/admin/recetario/inventario/eliminar/{{inventario_id}}" title="Eliminar"
                                 class="btn btn-sm btn-secondary">
                                 <i class="fa fa-trash"></i>
                             </a>
@@ -57,5 +66,5 @@
             </table>
         </div>
     </div>
+    {{!-- FIN fila 3 --}}
 </div>
-{{!-- fin fila 3 --}}
