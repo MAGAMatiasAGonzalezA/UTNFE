@@ -1,4 +1,7 @@
-<div class="container" style="margin: 100px auto;">
+<link rel="stylesheet" href="/stylesheets/formulogin.css">
+
+<h1>Registrate para continuar</h1>
+<div class="container" id="cajaform">
     <div class="row">
         <div class="col">
             <form action="/admin/register" method="post">
@@ -20,7 +23,7 @@
 
             </form>
             {{#if error}}
-                <p>{{error}}</p>
+                <p>{{message}}</p>
             {{/if}}
         </div>
     </div>

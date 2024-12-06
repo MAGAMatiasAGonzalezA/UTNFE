@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="/stylesheets/modificar.css">
+
+
+<div class="container caja">
+    <div class="row">
+        <h4 class="text-center">modificar cantidades del item en el inventario</h4>
+        {{!-- <form action="/admin/recetario/inventario/modificar" method="post">
+            <input type="hidden" value="{{item.inventario_id}}" name="inventario_id">
+            <div class="form-group">
+                <input type="text" class="form-control" value="{{item.item_nombre}}" name="item_nombre">
+            </div>
+            <div class="form-group">
+                <input type="number" step="0.001" class="form-control" value="{{item.cantidad}}" name="cantidad">
+            </div>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </form> --}}
+        <form action="/admin/recetario/inventario/modificar" method="post">
+            <input type="hidden" value="{{item.inventario_id}}" name="inventario_id">
+            <div class="form-group">
+                <label for="cantidad_actual">Cantidad actual:</label>
+                <p class="form-control" id="cantidad_actual">{{item.cantidad}}</p>
+            </div>
+            <div class="form-group">
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" step="0.001" class="form-control" name="cantidad_nueva" required>
+            </div>
+            <div class="form-group">
+                <label>Operación:</label>
+                <select name="operacion" class="form-control">
+                    <option value="sumar">Igreso</option>
+                    <option value="restar">Egreso</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </form>
+    </div>
+</div>
+{{#if error}}
+<h5>{{message}}</h5>
+{{/if}}

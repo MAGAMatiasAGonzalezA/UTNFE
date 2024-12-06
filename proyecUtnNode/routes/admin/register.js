@@ -3,7 +3,7 @@ var router = express.Router();
 var usuariosModel = require('./../../models/usuariosModel');
 
 
-router.get('/', function(req, res, next) {
+router.get('/', function (req, res, next) {
     res.render('admin/register', {
         layout: 'admin/layout'
     });
@@ -15,27 +15,37 @@ router.post('/', async (req, res, next) => {
         var password = req.body.password;
         var passwordR = req.body.passwordR;
 
-        var data = await usuariosModel.userexist(usuario);
-
+        if (!usuario || !password || !passwordR) {
+            res.render('admin/register', {
+                layout: 'admin/layout',
+                error: true,
+                message: 'Todos los campos deben completarce'
+            });
+            return
+        }
         if (password !== passwordR) {
-            console.log('Las contraseñas deben ser iguales para el registro');
             res.render('admin/register', {
                 layout: 'admin/layout',
-                error: 'Las contraseñas no coinciden. Por favor, inténtalo de nuevo.'
+                error: true,
+                message: 'Las contraseñas no coinciden. Por favor, inténtalo de nuevo.'
             });
-        } else if (data != undefined){
+            return
+        } 
+        
+        var data = await usuariosModel.userexist(usuario);
+        
+        if (data != undefined) {
             res.render('admin/register', {
                 layout: 'admin/layout',
-                error: 'El usuario ya existe. Prueba con otro nombre de usuario.'
+                error: true,
+                message: 'El usuario ya existe. Prueba con otro nombre de usuario.'
             });
+            return
         } else {
             await usuariosModel.register(usuario, password);
-            req.session.nombreUsuario = usuario;
-            req.session.registerMenssage = 'Registro completado con exito';
+            req.session.registerMenssage = 'Registro completado con exito, inicia secion aqui';
             res.redirect('/admin/login');
         };
-
-       
     } catch (error) {
         res.render('admin/register', {
             layout: 'admin/layout',

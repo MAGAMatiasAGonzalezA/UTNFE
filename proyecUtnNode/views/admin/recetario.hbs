@@ -1,13 +1,20 @@
-<div class="container" style="margin-top: 100px;">
+<link rel="stylesheet" href="/stylesheets/recetario.css">
+
+
+<h1>Majena tu inventario aqui</h1>
+<h2>Estamos en proceso de mejorar el sitio, por favor tenga algo de paciencia</h2>
+<p class="detalles">Para continuar por el momento puedes ingresar en la sección de inventario para ingresar o eliminar articulos y modificar sus cantidades dependiendo si es un ingreso o egreso de dicho articulo. Gracias por tu paciencia</p>
+
+<div class="container" id="caja">
     {{!-- fila 1 --}}
     <div class="row">
         <div class="col">
-            <p class="text-end">
+            <p class="text-center">
                 <span>Hola {{usuario}}!</span>
-                <a href="/admin/login/logout" class="btn btn-danger">Cerrar sesión
-                    <i class="fa fa-sign-out-alt"></i>
-                </a>
             </p>
+            <a href="/admin/login/logout" class="btn btn-danger" id="cerrar">Cerrar sesión
+                    <i class="fa fa-sign-out-alt"></i>
+            </a>
         </div>
     </div>
      {{!-- fin fila 1 --}}

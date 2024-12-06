@@ -1,4 +1,7 @@
-<div class="container" style="margin: 100px auto;">
+<link rel="stylesheet" href="/stylesheets/formulogin.css">
+
+<h1>Inicia sesion para continuar</h1>
+<div class="container" id="cajaform">
     <div class="row">
         <div class="col">
             <form action="/admin/login" method="post">
@@ -16,7 +19,7 @@
 
             </form>
             {{#if error}}
-                <p>Usuario o contraseña incorrecto!</p>
+                <p>{{message}}</p>
             {{/if}}
             {{#if registerMenssage}}
                 <p>{{registerMenssage}}</p>

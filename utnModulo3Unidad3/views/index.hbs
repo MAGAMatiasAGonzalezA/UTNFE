@@ -18,12 +18,14 @@
         <div id="novedades" class="col-md-3 offset-md-2 scroll_sections" style="margin-top: 15px;">
             <h2>Novedades</h2>
             <ul class="lista-novedades">
-                <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="images/novedades01.jpg"
-                            alt="">Nuevas recetas 1</a></li>
-                <li><a href="#"><img src="/images/novedades01.jpg" alt="">Nuevas recetas 2</a></li>
+                {{#each novedades}}
+                <li><a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#Modal{{id}}"><img src="images/novedades01.jpg"
+                            alt="">{{titulo}}</a></li>
+                {{/each}}
+                {{!-- <li><a href="#"><img src="/images/novedades01.jpg" alt="">Nuevas recetas 2</a></li>
                 <li><a href="#"><img src="/images/novedades01.jpg" alt="">Nuevas recetas 3</a></li>
                 <li><a href="#"><img src="/images/novedades01.jpg" alt="">Nuevas recetas 4</a></li>
-                <li><a href="#"><img src="/images/novedades01.jpg" alt="">Nuevas recetas 5</a></li>
+                <li><a href="#"><img src="/images/novedades01.jpg" alt="">Nuevas recetas 5</a></li> --}}
             </ul>
         </div>
         <!--  FIN NOVEDADES -->
@@ -68,28 +70,28 @@
             </div>
         </div><!-- FIN TESTIMONIOS -->
     </div>
-    
     <!--  CIERRA SECCION DIV -->
-
     <!-- INICIO MODAL -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    {{#each novedades}}
+    <div class="modal fade" id="Modal{{id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">El titulo del modal</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">{{titulo}}</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    El cuerpo del modal
+                    <h6>{{subtitulo}}</h6>
+                    <p>{{cuerpo}}</p>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar sin
-                        guardar</button>
+                {{!-- <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                     <button type="button" class="btn btn-primary">Guardar cambios</button>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
+    {{/each}}
     <!-- FIN MODAL -->
 
     <!-- INICIO HISTORIAS -->

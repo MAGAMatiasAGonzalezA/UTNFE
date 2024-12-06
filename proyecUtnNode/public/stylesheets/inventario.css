@@ -1,0 +1,57 @@
+body {
+    background-color: rgb(223, 224, 224);
+}
+
+h1 {
+    margin: 30px auto 30px auto;
+    text-align: center;
+    color: blue;
+}
+
+.saludo {
+    margin: 80px auto 0 auto;
+    text-align: center;
+}
+
+h3 {
+    text-align: right;
+    padding: 3px auto;
+    margin: 3px auto;
+}
+
+.caja {
+    margin: 50px auto 50px auto;
+}
+
+p span {
+    color: green;
+    font-size: 50px;
+}
+
+.nuevo {
+    float: right;
+    padding: 3px auto;
+    margin: 3px auto;
+}
+
+.titulo {
+    background-color:#aac4ee;
+    margin: auto 0.3px;
+}
+
+.unidades {
+    font-family: monospace; 
+}
+
+.modificar, .eliminar {
+    min-height: 5px;
+    min-width: 30px;
+    background-color: blue;
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
+.eliminar {
+    background-color: red;
+}
