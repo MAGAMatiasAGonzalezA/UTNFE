@@ -40,7 +40,8 @@ p span {
 }
 
 .unidades {
-    font-family: monospace; 
+    font-family: monospace;
+    text-align: right;
 }
 
 .modificar, .eliminar {

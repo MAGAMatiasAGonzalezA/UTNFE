@@ -26,38 +26,6 @@
     </div>
     {{!-- fin fila 2 --}}
 
-    {{!-- Inicio form --}}
-    {{!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">
-                        Modificaciones
-                    </h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="modificar" class="form" action="/inventario" method="post">
-                        <div class="mb-3">
-                            <label for="item-name" class="col-form-label">nombre del articulo: </label>
-                            <input type="text" class="form-control" id="item-name" name="itemname" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="item-cantidad" class="col-form-label">cantidad:</label>
-                            <input class="form-control" type="number" id="item-cantidad" name="itemcantidad" required>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Omitir</button>
-                            <button type="submit" class="btn btn-primary">Guardar</button>
-                        </div>
-                    </form>
-                </div>
-
-            </div>
-        </div>
-    </div> --}}
-    {{!-- fin form --}}
-
     {{!-- INICIO fila 3 --}}
     <div class="row">
         <div class="col">
@@ -67,8 +35,8 @@
                         <th scope="col" class="text-center">indice</th>
                         <th scope="col" class="text-center">Usuario</th>
                         <th scope="col" class="text-center">Item</th>
-                        <th scope="col" class="text-center">Cantidad</th>
-                        <th scope="col" class="text-center">Fecha</th>
+                        <th scope="col" class="text-center">Cantidad en Gr.</th>
+                        <th scope="col" class="text-center">Fecha y hora</th>
                         <th></th>
                     </tr>
                 </thead>
@@ -78,7 +46,7 @@
                         <th scope="row" class="text-center">{{inventario_id}}</th>
                         <td class="text-center">{{usuario}}</td>
                         <td class="text-center">{{item_nombre}}</td>
-                        <td class="text-center unidades">{{cantidad}}</td>
+                        <td class="unidades">{{cantidad}}</td>
                         <td class="text-center">{{fecha}}</td>
                         <td class="text-end">
                             <a href="/admin/recetario/inventario/modificar/{{inventario_id}}" title="modificar"

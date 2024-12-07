@@ -22,31 +22,39 @@ router.get('/logout', function (req, res, next) {
 
 router.post('/', async (req, res, next) => {
     try {
-        var usuario = req.body.usuario;
-        var password = req.body.password;
+        if (req.body.usuario != "" && req.body.password != "") {
 
-        var data = await usuariosModel.getUserAndPassword(usuario, password);
-        var esta = await usuariosModel.userexist(usuario);
+            var usuario = req.body.usuario;
+            var password = req.body.password;
 
-        if (data) {
-            req.session.id_usuario = data.id; // nombre de la columna
-            req.session.nombre = data.usuario; // nombre de la fila
-            res.redirect('/admin/recetario');
-        } else if (esta == undefined) {
-            res.render('admin/register', {
-                layout: 'admin/layout',
-                error: true,
-                message: 'Usuario no registrado, registrate aqui'
-            });
+            var data = await usuariosModel.getUserAndPassword(usuario, password);
+            var esta = await usuariosModel.userexist(usuario);
+
+            if (data) {
+                req.session.id_usuario = data.id; // nombre de la columna
+                req.session.nombre = data.usuario; // nombre de la fila
+                res.redirect('/admin/recetario');
+            } else if (esta == undefined) {
+                res.render('admin/register', {
+                    layout: 'admin/layout',
+                    error: true,
+                    message: 'Usuario no registrado, registrate aqui'
+                });
+            } else {
+                res.render('admin/login', {
+                    layout: 'admin/layout',
+                    error: true,
+                    message: 'Usuario o contraseña incorrecto'
+                });
+            }
         } else {
             res.render('admin/login', {
                 layout: 'admin/layout',
                 error: true,
-                message: 'Usuario o contraseña incorrecto'
-            });
+                message: 'Todos los campos son requeridos'
+            })
         }
     } catch (error) {
-        console.log(error);
         res.render('admin/login', {
             layout: 'admin/layout',
             error: true,

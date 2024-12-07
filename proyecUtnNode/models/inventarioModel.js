@@ -30,17 +30,6 @@ async function getArticuloById(id) {
     return rows[0];
 }
 
-// async function modificarCantArticuloById(obj, id) {
-//     try {
-//         var query = "UPDATE inventario SET cantidad = ? WHERE inventario_id = ?";
-//         var rows = await pool.query(query, [obj.cantidad, id]);
-//         return rows;
-//     } catch (error) {
-//         console.log("algo anda mal");
-//         throw error;
-//     };
-// };
-
 async function modificarCantidad(id, nuevaCantidad) {
     try {
         const query = "UPDATE inventario SET cantidad = ?, fecha = NOW() WHERE inventario_id = ?";
