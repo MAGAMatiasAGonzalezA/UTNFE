@@ -8,17 +8,17 @@
             <p class="text-center saludo">
                 <span>Hola {{usuario}}!</span>
             </p>
+        </div>
     </div>
-    </div>
-    <h1 class="text-center">Invetario mercaderia</h1>
+    <h1 class="text-center">Tus recetas</h1>
     {{!-- fin fila 1 --}}
     {{!-- INICIO fila 2 --}}
     <div class="row titulo">
         <div class="col-8">
-            <h3>Listado de materiales</h3>
+            <h3>Lista de recetas</h3>
         </div>
         <div class="col-4">
-            <a href="/admin/recetario/inventario/agregar" class="btn btn-success nuevo"> <i class="fa fa-plus">
+            <a href="/admin/recetario/recetas/agregarReceta" class="btn btn-success nuevo"> <i class="fa fa-plus">
                 </i>Nuevo</a>
         </div>
     </div>
@@ -30,29 +30,24 @@
             <table class="table table-bordered-primary">
                 <thead class="table-primary">
                     <tr>
-                        <th scope="col" class="text-center">indice</th>
-                        <th scope="col" class="text-center">Usuario</th>
-                        <th scope="col" class="text-center">Item</th>
-                        <th scope="col" class="text-center">Cantidad en Gr.</th>
-                        <th scope="col" class="text-center">Fecha y hora</th>
+                        <th scope="col" class="text-center">receta</th>
+                        <th scope="col" class="text-center">Ingredientes</th>
+                        <th scope="col" class="text-center">procedimiento</th>
                         <th></th>
                     </tr>
                 </thead>
                 <tbody class="table-info">
-                    {{#each inventario}}
-                    <tr>
-                        <th scope="row" class="text-center">{{inventario_id}}</th>
-                        <td class="text-center">{{usuario}}</td>
-                        <td class="text-center">{{item_nombre}}</td>
-                        <td class="unidades">{{cantidad}}</td>
-                        <td class="text-center">{{fecha}}</td>
+                    {{#each recetas}}
+                        <td class="text-center">{{receta_nombre}}</td>
+                        <td class="text-center">{{ingredientes_cant}}</td>
+                        <td class="text-center">{{procedimiento}}</td>
                         <td class="text-end">
                             <a href="/admin/recetario/inventario/modificar/{{inventario_id}}" title="modificar"
                                 class="btn btn-sm btn-secondary modificar">modificar
                                 <i class="fa fa-trash"></i>
                             </a>
 
-                            <a href="/admin/recetario/inventario/eliminar/{{inventario_id}}" title="Eliminar"
+                            <a href="/admin/recetario/recetas/eliminar/{{receta_id}}" title="Eliminar"
                                 class="btn btn-sm btn-secondary eliminar">eliminar
                                 <i class="fa fa-trash"></i>
                             </a>
@@ -61,6 +56,9 @@
                     {{/each}}
                 </tbody>
             </table>
+            {{#if error}}
+            <h5>{{message}}</h5>
+            {{/if}}
         </div>
     </div>
     {{!-- FIN fila 3 --}}

@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="/stylesheets/formulogin.css">
+
+<div class="container caja">
+    <div class="row">
+        <h4 class="text-center">Agrega los ingredientes de la receta</h4>
+        <form action="/admin/recetario/recetas/agregarReceta" method="post">
+            <div class="col-8 form-group">
+                <input type="text" class="form-control" placeholder="Nombre ingrediente" name="item_nombre">
+            </div>
+            
+            <div class="col-4 form-group">
+                <input type="number" class="form-control" placeholder="Cantidad del ingrediente" name="cantidad">
+            </div>
+
+            
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </form>
+        {{#if error}}
+        <h5>{{message}}</h5>
+        {{/if}}
+    </div>
+</div>

@@ -19,8 +19,9 @@
             <h2>Novedades</h2>
             <ul class="lista-novedades">
                 {{#each novedades}}
-                <li><a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#Modal{{id}}"><img src="images/novedades01.jpg"
-                            alt="">{{titulo}}</a></li>
+                <li><a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#Modal{{id}}">
+                    <img src="{{imagen}}"/>
+                {{titulo}}</a></li>
                 {{/each}}
                 {{!-- <li><a href="#"><img src="/images/novedades01.jpg" alt="">Nuevas recetas 2</a></li>
                 <li><a href="#"><img src="/images/novedades01.jpg" alt="">Nuevas recetas 3</a></li>
@@ -82,6 +83,7 @@
                 </div>
                 <div class="modal-body">
                     <h6>{{subtitulo}}</h6>
+                    <img src="{{imagen}}"/>
                     <p>{{cuerpo}}</p>
                 </div>
                 {{!-- <div class="modal-footer">
