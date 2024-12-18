@@ -56,3 +56,17 @@ p span {
 .eliminar {
     background-color: red;
 }
+
+input {
+    margin: 3px auto;
+}
+
+#boton {
+    float: inline-end;
+    height: 30px;
+    width: 70px;
+    background-color: green;
+    padding: 5px 10px;
+    margin: 10px auto;
+    color: black;
+}

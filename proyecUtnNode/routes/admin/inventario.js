@@ -4,7 +4,12 @@ var inventarioModel = require('./../../models/inventarioModel');
 
 // mostrar BD
 router.get('/', async function (req, res, next) {
-    var inventario = await inventarioModel.getInventario();
+    var inventario
+    if (req.query.q === undefined) {
+        inventario = await inventarioModel.getInventario();
+    } else {
+        inventario =  await inventarioModel.buscarInventario(req.query.q);
+    }
 
     inventario = inventario.map(function (invent) {
         // console.log(inventario);
@@ -21,7 +26,9 @@ router.get('/', async function (req, res, next) {
     res.render('admin/inventario', {
         layout: 'admin/layout',
         usuario: req.session.nombre,
-        inventario
+        inventario,
+        id_search: req.query.q !== undefined,
+        q: req.query.q
     });
 });
 

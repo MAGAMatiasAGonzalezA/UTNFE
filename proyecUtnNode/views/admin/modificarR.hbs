@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="/stylesheets/formulogin.css">
+
+<div class="container caja">
+    <div class="row">
+        <h4 class="text-center">Modificar receta</h4>
+        <form action="/admin/recetario/recetas/modificarR" method="post">
+            <input type="hidden" value="{{receta.receta_id}}" name="receta_id">
+            <div class="form-group">
+                <label for="receta_nombre_actual">Nombre actual de la receta:</label>
+                <p class="form-control item_nombre" id="receta_nombre_actual">{{receta.receta_nombre}}</p>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Nuevo nombre de receta" name="receta_nombre">
+            </div>
+            <div class="form-group">
+                <label for="cantidad_actual">Cantidad actual de ingredientes:</label>
+                <p class="form-control" id="cantidad_actual">{{receta.ingredientes_cant}}</p>
+            </div>
+            <div class="form-group">
+                <input type="number" class="form-control" placeholder="Nueva cantidad de ingredientes" name="ingredientes_cant">
+            </div>
+            <div class="form-group">
+                <label for="procedimiento_actual">Procedimiento actual de la receta:</label>
+                <p class="form-control" id="procedimiento_actual">{{receta.procedimiento}}</p>
+            </div>
+            <div class="form-group">
+                <textarea type="text" class="form-control" name="procedimiento" placeholder="Actualizar procedimiento"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </form>
+        {{#if error}}
+        <h5>{{message}}</h5>
+        {{/if}}
+    </div>
+</div>

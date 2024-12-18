@@ -83,7 +83,45 @@ async function modificarCantidad(id, nuevaCantidad) {
     }
 }
 
+async function modificarReceta(idR, nombre, cant, procedimiento) {
+    const query = "UPDATE recetas SET receta_nombre = ?, ingredientes_cant = ?, procedimiento = ? WHERE receta_id = ?";
+    const rows = await pool.query(query, [nombre, cant, procedimiento, idR]);
+    return rows;
+}
+
+async function getIngredientesByRecetaId(id) {
+    const query = 'SELECT item_nombre, cantidad FROM ingredientesreceta WHERE receta_id = ?';
+    var rows = pool.query(query, [id]);
+    return rows;
+}
+
+async function getItemNombre(item) {
+    var query = "SELECT * FROM inventario WHERE item_nombre = ?";
+    var rows = await pool.query(query, [item]);
+    return rows[0];
+}
+
+async function buscarInventario(buscar) {
+    var query = "SELECT * FROM inventario WHERE item_nombre LIKE ?";
+    var rows = await pool.query(query, ['%' + buscar + '%']);
+    return rows;
+}
+
+async function buscarreceta(buscar) {
+    var query = "SELECT * FROM recetas WHERE receta_nombre LIKE ?";
+    var rows = await pool.query(query, ['%' + buscar + '%']);
+    return rows;
+}
+
+async function modificarIngredientes(idR, item, cant) {
+    const query = "UPDATE ingredientesreceta SET item_nombre = ?, cantidad = ? WHERE receta_id = ?";
+    const rows = await pool.query(query, [item, cant, idR]);
+    return rows;
+}
+
 module.exports = {
     getInventario, deleteInventarioById, insertItem, getArticuloById, modificarCantidad,
-    getRecetas, insertReceta, deleteRecetaById, getRecetaById, getAllRecetasByUsuario, insertIngredientes
+    getRecetas, insertReceta, deleteRecetaById, getRecetaById, getAllRecetasByUsuario, insertIngredientes,
+    modificarReceta, getIngredientesByRecetaId, getItemNombre, buscarInventario, buscarreceta,
+    modificarIngredientes
 };

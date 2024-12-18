@@ -21,9 +21,22 @@
             <a href="/admin/recetario/recetas/agregarReceta" class="btn btn-success nuevo"> <i class="fa fa-plus">
                 </i>Nuevo</a>
         </div>
+        <div class="col-12 text-right">
+            <form class="form-inline my-2 my-lg-0" action="/admin/recetario/recetas" method="get">
+                <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search" name="q"
+                    value="{{q}}">
+                <button class="btn btn-secondary my-2 my-sm-0" id="boton" type="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+        </div>
     </div>
     {{!-- fin fila 2 --}}
-
+    {{#if is_search}}
+        {{#unless novedades.length}}
+            No se encontraron resultados para "<strong>{{q}}</strong>"
+        {{/unless}}
+    {{/if}}
     {{!-- INICIO fila 3 --}}
     <div class="row">
         <div class="col">
@@ -38,11 +51,14 @@
                 </thead>
                 <tbody class="table-info">
                     {{#each recetas}}
+                    <tr>
                         <td class="text-center">{{receta_nombre}}</td>
-                        <td class="text-center">{{ingredientes_cant}}</td>
-                        <td class="text-center">{{procedimiento}}</td>
+                        <td class="text-center">{{ingredientes_cant}} <a href="/admin/recetario/recetas/ingredientesR/{{receta_id}}" title="Agrega"
+                                class="btn btn-sm btn-secondary eliminar">Agr-Mod<i class="fa fa-trash"></i></a> 
+                        </td>
+                        <td class="text-center scroll">{{procedimiento}}</td>
                         <td class="text-end">
-                            <a href="/admin/recetario/inventario/modificar/{{inventario_id}}" title="modificar"
+                            <a href="/admin/recetario/recetas/modificarR/{{receta_id}}" title="modificar"
                                 class="btn btn-sm btn-secondary modificar">modificar
                                 <i class="fa fa-trash"></i>
                             </a>

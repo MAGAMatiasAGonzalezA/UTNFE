@@ -2,17 +2,23 @@
 
 <div class="container caja">
     <div class="row">
-        <h4 class="text-center">Agrega los ingredientes de la receta</h4>
-        <form action="/admin/recetario/recetas/agregarReceta" method="post">
-            <div class="col-8 form-group">
+        <h4 class="text-center">Agrega o modificar cantidad de ingredientes</h4>
+        <form action="/admin/recetario/recetas/ingredientesR" method="post">
+            <input type="hidden" value="{{receta.receta_id}}" name="receta_id">
+            <div class="form-group">
+                <label for="receta_nombre">Receta:</label>
+                <p class="form-control item_nombre" id="receta_nombre">{{receta.receta_nombre}}</p>
+            </div>
+            {{#each ingredientes}}
+            <div class="form-group">
+                <label for="item-nombre">{{this.item_nombre}}</label>
                 <input type="text" class="form-control" placeholder="Nombre ingrediente" name="item_nombre">
             </div>
-            
-            <div class="col-4 form-group">
-                <input type="number" class="form-control" placeholder="Cantidad del ingrediente" name="cantidad">
+            <div class="form-group">
+                <label for="item-nombre">{{this.cantidad}}</label>
+                <input type="number" step="0.001" class="form-control" placeholder="Cantidad del ingrediente" name="cantidad">
             </div>
-
-            
+            {{/each}}
             <button type="submit" class="btn btn-primary">Guardar</button>
         </form>
         {{#if error}}
