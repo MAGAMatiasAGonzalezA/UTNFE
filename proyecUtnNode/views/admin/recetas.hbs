@@ -22,21 +22,17 @@
                 </i>Nuevo</a>
         </div>
         <div class="col-12 text-right">
-            <form class="form-inline my-2 my-lg-0" action="/admin/recetario/recetas" method="get">
+            <form class="form-inline my-2 my-lg-0" role="search" action="/admin/recetario/recetas" method="get">
                 <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search" name="q"
-                    value="{{q}}">
+                    {{#if q}}value="{{q}}" {{/if}}>
                 <button class="btn btn-secondary my-2 my-sm-0" id="boton" type="submit">
-                    <i class="fa fa-search"></i>
+                    <i class="fa fa-search">Buscar</i>
                 </button>
             </form>
         </div>
     </div>
     {{!-- fin fila 2 --}}
-    {{#if is_search}}
-        {{#unless novedades.length}}
-            No se encontraron resultados para "<strong>{{q}}</strong>"
-        {{/unless}}
-    {{/if}}
+    
     {{!-- INICIO fila 3 --}}
     <div class="row">
         <div class="col">
@@ -72,8 +68,13 @@
                     {{/each}}
                 </tbody>
             </table>
+            {{#if id_search}}
+                {{#unless recetas.length}}
+                    <p>No se encontraron resultados para "<strong>{{q}}</strong>"</p>
+                {{/unless}}
+            {{/if}}
             {{#if error}}
-            <h5>{{message}}</h5>
+                <h5>{{message}}</h5>
             {{/if}}
         </div>
     </div>

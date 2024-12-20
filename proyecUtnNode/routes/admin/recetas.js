@@ -16,7 +16,7 @@ router.get('/', async function (req, res, next) {
         layout: 'admin/layout',
         usuario: req.session.nombre,
         recetas,
-        iid_search: req.query.q !== undefined,
+        id_search: req.query.q !== undefined,
         q: req.query.q
     });
 });

@@ -71,5 +71,8 @@ tbody tr td .scroll {
     background-color: green;
     padding: 5px 10px;
     margin: 10px auto;
-    color: black;
+}
+
+.color {
+    color: white;
 }

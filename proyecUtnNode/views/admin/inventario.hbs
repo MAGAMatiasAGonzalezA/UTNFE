@@ -27,17 +27,13 @@
                 <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search" name="q"
                     value="{{q}}">
                 <button class="btn btn-secondary my-2 my-sm-0" id="boton" type="submit">
-                    <i class="fa fa-search"></i>
+                    <i class="fa fa-search">Buscar</i>
                 </button>
             </form>
         </div>
     </div>
     {{!-- fin fila 2 --}}
-    {{#if is_search}}
-        {{#unless novedades.length}}
-            No se encontraron resultados para "<strong>{{q}}</strong>"
-        {{/unless}}
-    {{/if}}
+
     {{!-- INICIO fila 3 --}}
     <div class="row">
         <div class="col">
@@ -75,6 +71,11 @@
                     {{/each}}
                 </tbody>
             </table>
+            {{#if id_search}}
+                {{#unless novedades.length}}
+                    No se encontraron resultados para "<strong>{{q}}</strong>"
+                {{/unless}}
+            {{/if}}
         </div>
     </div>
     {{!-- FIN fila 3 --}}
