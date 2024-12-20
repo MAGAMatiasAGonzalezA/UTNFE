@@ -77,20 +77,20 @@ router.get('/eliminar/:id', async (req, res, next) => {
     try {
         var datos = await inventarioModel.getRecetaById(id);
         var recetas = await inventarioModel.getAllRecetasByUsuario(req.session.nombre);
-        if (datos.usuario === req.session.nombre) {
+        // if (datos.usuario === req.session.nombre) {
             await inventarioModel.deleteRecetaById(id);
             res.redirect('/admin/recetario/recetas');
             //ACA NO ME FUNCIONA EL ELSE
             //VERIFICAR
-        } else {
-            console.log(recetas)
-            res.render('admin/recetario/recetas', {
-                recetas,
-                layout: 'admin/layout',
-                error: true,
-                message: "Otro usuario cargo esta receta, solo puedes eliminar tus recetas"
-            });
-        };
+        // } else {
+        //     console.log(recetas)
+        //     res.render('admin/recetario/recetas', {
+        //         recetas,
+        //         layout: 'admin/layout',
+        //         error: true,
+        //         message: "Otro usuario cargo esta receta, solo puedes eliminar tus recetas"
+        //     });
+        //};
     } catch (error) {
         console.log("UPS!!!", error);
         res.render('/admin/recetario/recetas', {
@@ -118,7 +118,7 @@ router.post('/modificarR', async (req, res, next) => {
         var receta_nombre = req.body.receta_nombre;
         var ingredientes_cant = req.body.ingredientes_cant;
         var procedimiento = req.body.procedimiento;
-        console.log(id, receta_nombre, ingredientes_cant, procedimiento);
+        console.log("cantidad de ingredientes: ", ingredientes_cant);
         if (receta_nombre == "") {
             receta_nombre = receta.receta_nombre;
         }
@@ -148,53 +148,99 @@ router.get('/ingredientesR/:id', async (req, res, next) => {
     var receta = await inventarioModel.getRecetaById(id);
     var ingredientes = await inventarioModel.getIngredientesByRecetaId(id);
 
-    console.log(receta);
-    console.log(ingredientes);
-   
+
+    if (receta.ingredientes_cant !== ingredientes.length) {
+        for (let i = 0; i < receta.ingredientes_cant; i++) {
+            if (!ingredientes[i]) {
+                ingredientes[i] = {
+                    item_nombre: "",
+                    cantidad: "",
+                    receta_id: id
+                };
+            }
+        }
+    }
+    // if (ingredientes.length < 1) {
+    //     ingredientes = [];
+    //     for (let i = 0; i < receta.ingredientes_cant; i++) {
+    //         ingredientes.push({
+    //             item_nombre: "",
+    //             cantidad: "",
+    //             receta_id: id
+    //         })
+    //     }
+  
+
+    // console.log(receta.ingredientes_cant);
+    // console.log(ingredientes);
+
     res.render('admin/ingredientesR', {
         layout: 'admin/layout',
         receta,
         ingredientes,
-        error: true,
-        message: 'No se pudo modificar algo salio mal.'
+        // error: true,
+        // message: 'No se pudo modificar algo salio mal.'
     });
 })
 
-router.post('/ingredientesR/:id', async (req, res, next) => {
+router.post('/ingredientesR', async (req, res, next) => {
     try {
         var id = req.body.receta_id;
         var receta = await inventarioModel.getRecetaById(id);
         var ingredientes = await inventarioModel.getIngredientesByRecetaId(id);
-        var receta_item = req.body.item_nombre;
-        var receta_cant = req.body.cantidad;
-        var entradas = ingredientes.lenght;
+
+        
+
         console.log(receta.ingredientes_cant);
-        console.log(id, receta_item, receta_cant);
-        if (receta_item == "") {
-            receta_item = ingredientes.item_nombre;
+        // if (receta.ingredientes_cant !== ingredientes.length) {
+            for (let i = 0; i < receta.ingredientes_cant; i++) {
+                if (!ingredientes[i]) {
+                    ingredientes[i] = {
+                        item_nombre: "",
+                        cantidad: "",
+                        receta_id: id
+                    };
+                }
+                if (req.body.item_nombre[i] !== undefined) {
+                    ingredientes[i].item_nombre = req.body.item_nombre[i];
+                }
+                if (req.body.cantidad[i] !== undefined) {
+                    ingredientes[i].cantidad = req.body.cantidad[i];
+                }
+            }
+        
+        console.log(ingredientes);
+        // if (ingredientes.length < 1) {
+        //     ingredientes = [];
+        console.log("entrada de usuario", ingredientes);
+        for (let i = 0; i < ingredientes.length; i++) {
+            await inventarioModel.insertImgredienteReceta(ingredientes[i]);
+            console.log("ingredientes insertados", ingredientes[i]);
         }
-        if (receta_cant == "") {
-            receta_cant = ingredientes.cantidad;
-        }
-        if (ingredientes.lenght === 0) {
-            entradas = receta.ingredientes_cant;
-            console.log(entradas)
-            ingredientes = Array.from({ lenght: entradas}, () => ({
-                item_nombre: "",
-                cantidad: ""
-            }))
-        }
-        console.log(receta_item, receta_cant)
+        //}
+
+        // if (receta_item == "") {
+        //     receta_item = ingredientes.item_nombre;
+        // }
+        // if (receta_cant == "") {
+        //     receta_cant = ingredientes.cantidad;
+        // }
+
+        console.log("");
         // actualizo la BD
-        await inventarioModel.modificarIngredientes(id, receta_item, receta_cant);
+        // try {
+        // await inventarioModel.insertImgredienteReceta()
+        // }
+        //await inventarioModel.modificarIngredientes(id, receta_item, receta_cant);
         res.redirect('/admin/recetario/recetas');
     } catch (error) {
-        console.log("UPSS!!!", error);
-        res.render('admin/modificarR', {
-            layout: 'admin/layout',
-            error: true,
-            message: 'No se pudo modificar algo salio mal.'
-        });
+        console.log("UPSS!!! Error al insertar ingredientes:", error);
+        res.redirect('/admin/recetario/recetas');
+        // res.render('admin/modificarR', {
+        //     layout: 'admin/layout',
+        //     error: true,
+        //     message: 'No se pudo modificar algo salio mal.'
+        // });
     }
 })
 

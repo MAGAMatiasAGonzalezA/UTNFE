@@ -113,15 +113,29 @@ async function buscarreceta(buscar) {
     return rows;
 }
 
+async function insertImgredienteReceta(ingredientes) {
+    try {
+        var query = 'INSERT INTO ingredientesreceta (item_nombre, cantidad, receta_id) VALUE (?, ?, ?)';
+        var rows = await pool.query(query, [ingredientes.item_nombre, ingredientes.cantidad, ingredientes.receta_id]);
+        return rows;
+    } catch (error) {
+        console.log("chan!!!", error);
+        throw error;
+    }
+}
+
+
 async function modificarIngredientes(idR, item, cant) {
     const query = "UPDATE ingredientesreceta SET item_nombre = ?, cantidad = ? WHERE receta_id = ?";
     const rows = await pool.query(query, [item, cant, idR]);
     return rows;
 }
 
+
+
 module.exports = {
     getInventario, deleteInventarioById, insertItem, getArticuloById, modificarCantidad,
     getRecetas, insertReceta, deleteRecetaById, getRecetaById, getAllRecetasByUsuario, insertIngredientes,
     modificarReceta, getIngredientesByRecetaId, getItemNombre, buscarInventario, buscarreceta,
-    modificarIngredientes
+    modificarIngredientes, insertImgredienteReceta
 };
