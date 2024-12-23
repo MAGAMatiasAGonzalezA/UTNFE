@@ -5,12 +5,19 @@ var inventarioModel = require('./../../models/inventarioModel');
 //mostar BD recetas
 router.get('/', async function (req, res, next) {
     var recetas
+    // var ingredientes
+    // var items
 
     if (req.query.q === undefined) {
         recetas = await inventarioModel.getRecetas();
     } else {
         recetas = await inventarioModel.buscarreceta(req.query.q);
     }
+    // for (let i = 0; i < recetas.length; i++) {
+    //     ingredientes = await inventarioModel.getIngredientesByRecetaId(recetas[i].receta_id);
+    //     items.push({item_nombre: ingredientes.item_nombre})
+    // }
+    // console.log(items);
 
     res.render('admin/recetas', {
         layout: 'admin/layout',
@@ -144,10 +151,10 @@ router.post('/modificarR', async (req, res, next) => {
 
 // agregar ingrediente en la receta
 router.get('/ingredientesR/:id', async (req, res, next) => {
-    var id = req.params.id;
-    var receta = await inventarioModel.getRecetaById(id);
-    var ingredientes = await inventarioModel.getIngredientesByRecetaId(id);
-
+    req.session.receta_id =  req.params.id;
+    var receta = await inventarioModel.getRecetaById(req.session.receta_id);
+    var ingredientes = await inventarioModel.getIngredientesByRecetaId(req.session.receta_id);
+    
 
     if (receta.ingredientes_cant !== ingredientes.length) {
         for (let i = 0; i < receta.ingredientes_cant; i++) {
@@ -155,7 +162,7 @@ router.get('/ingredientesR/:id', async (req, res, next) => {
                 ingredientes[i] = {
                     item_nombre: "",
                     cantidad: "",
-                    receta_id: id
+                    receta_id: req.session.receta_id
                 };
             }
         }
@@ -185,10 +192,10 @@ router.get('/ingredientesR/:id', async (req, res, next) => {
 
 router.post('/ingredientesR', async (req, res, next) => {
     try {
-        var id = req.body.receta_id;
+        var id = req.session.receta_id
         var receta = await inventarioModel.getRecetaById(id);
         var ingredientes = await inventarioModel.getIngredientesByRecetaId(id);
-
+        // console.log(id);
         
 
         console.log(receta.ingredientes_cant);
@@ -200,22 +207,28 @@ router.post('/ingredientesR', async (req, res, next) => {
                         cantidad: "",
                         receta_id: id
                     };
+                } else {
+                    ingredientes[i].receta_id = id;
                 }
                 if (req.body.item_nombre[i] !== undefined) {
                     ingredientes[i].item_nombre = req.body.item_nombre[i];
+                } else {
+                    ingredientes[i].item_nombre = ingredientes[i].item_nombre;
                 }
                 if (req.body.cantidad[i] !== undefined) {
                     ingredientes[i].cantidad = req.body.cantidad[i];
+                } else {
+                    ingredientes[i].cantidad = ingredientes[i].cantidad;
                 }
             }
         
         console.log(ingredientes);
         // if (ingredientes.length < 1) {
         //     ingredientes = [];
-        console.log("entrada de usuario", ingredientes);
+        // console.log("entrada de usuario", ingredientes);
         for (let i = 0; i < ingredientes.length; i++) {
-            await inventarioModel.insertImgredienteReceta(ingredientes[i]);
-            console.log("ingredientes insertados", ingredientes[i]);
+            await inventarioModel.modificarIngredientes(ingredientes[i]);
+            // console.log("ingredientes insertados", ingredientes[i]);
         }
         //}
 
@@ -226,7 +239,8 @@ router.post('/ingredientesR', async (req, res, next) => {
         //     receta_cant = ingredientes.cantidad;
         // }
 
-        console.log("");
+        // console.log("");
+        req.session.receta_id = null;
         // actualizo la BD
         // try {
         // await inventarioModel.insertImgredienteReceta()
@@ -234,6 +248,7 @@ router.post('/ingredientesR', async (req, res, next) => {
         //await inventarioModel.modificarIngredientes(id, receta_item, receta_cant);
         res.redirect('/admin/recetario/recetas');
     } catch (error) {
+        req.session.receta_id = null;
         console.log("UPSS!!! Error al insertar ingredientes:", error);
         res.redirect('/admin/recetario/recetas');
         // res.render('admin/modificarR', {
